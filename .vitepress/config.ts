@@ -1,16 +1,7 @@
 import { defineConfig } from "vitepress";
 
-// Navbar translations
-const nav = {
-  en: [
-    { text: "Home", link: "/" },
-    { text: "Guide", link: "/guide/" },
-  ],
-  zh: [
-    { text: "首页", link: "/zh/" },
-    { text: "指南", link: "/zh/guide/" },
-  ],
-};
+// Single navigation item
+const nav = [{ text: "Refly", link: "https://refly.ai" }];
 
 // Sidebar translations
 const sidebar = {
@@ -22,6 +13,13 @@ const sidebar = {
         { text: "Getting Started", link: "/guide/getting-started" },
       ],
     },
+    {
+      text: "Changelog",
+      items: [
+        { text: "Version 1.0.0", link: "/changelog/v1.0.0" },
+        { text: "Version 0.9.0", link: "/changelog/v0.9.0" },
+      ],
+    },
   ],
   zh: [
     {
@@ -29,6 +27,13 @@ const sidebar = {
       items: [
         { text: "介绍", link: "/zh/guide/introduction" },
         { text: "快速开始", link: "/zh/guide/getting-started" },
+      ],
+    },
+    {
+      text: "更新日志",
+      items: [
+        { text: "版本 1.0.0", link: "/zh/changelog/v1.0.0" },
+        { text: "版本 0.9.0", link: "/zh/changelog/v0.9.0" },
       ],
     },
   ],
@@ -45,7 +50,7 @@ export default defineConfig({
       label: "English",
       lang: "en",
       themeConfig: {
-        nav: nav.en,
+        nav,
         sidebar: sidebar.en,
       },
     },
@@ -53,7 +58,7 @@ export default defineConfig({
       label: "简体中文",
       lang: "zh",
       themeConfig: {
-        nav: nav.zh,
+        nav,
         sidebar: sidebar.zh,
       },
     },
@@ -61,7 +66,7 @@ export default defineConfig({
 
   themeConfig: {
     // Social links
-    socialLinks: [{ icon: "github", link: "https://github.com/your-account" }],
+    socialLinks: [{ icon: "github", link: "https://github.com/refly-ai" }],
 
     // Language selection
     langMenuLabel: "Change Language",
