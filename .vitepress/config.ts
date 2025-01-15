@@ -14,6 +14,10 @@ const sidebar = {
       ],
     },
     {
+      text: "Community",
+      items: [{ text: "Feedback Group", link: "/community/feedback-group" }],
+    },
+    {
       text: "Changelog",
       items: [
         { text: "Version 1.0.0", link: "/changelog/v1.0.0" },
@@ -28,6 +32,10 @@ const sidebar = {
         { text: "介绍", link: "/zh/guide/introduction" },
         { text: "快速开始", link: "/zh/guide/getting-started" },
       ],
+    },
+    {
+      text: "社区",
+      items: [{ text: "反馈群", link: "/zh/community/feedback-group" }],
     },
     {
       text: "更新日志",
