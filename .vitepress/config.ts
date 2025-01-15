@@ -8,10 +8,7 @@ const sidebar = {
   en: [
     {
       text: "Guide",
-      items: [
-        { text: "Introduction", link: "/guide/introduction" },
-        { text: "Getting Started", link: "/guide/getting-started" },
-      ],
+      items: [{ text: "Getting Started", link: "/guide/getting-started" }],
     },
     {
       text: "Community",
@@ -28,10 +25,7 @@ const sidebar = {
   zh: [
     {
       text: "指南",
-      items: [
-        { text: "介绍", link: "/zh/guide/introduction" },
-        { text: "快速开始", link: "/zh/guide/getting-started" },
-      ],
+      items: [{ text: "快速开始", link: "/zh/guide/getting-started" }],
     },
     {
       text: "社区",

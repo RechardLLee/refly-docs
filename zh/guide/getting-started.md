@@ -1,31 +1,170 @@
-# 快速开始
+### Refly 是什么
 
-本指南将帮助您快速上手。
+Refly 是一个基于「**自由画布**」理念构建的 AI 原生内容创作平台，通过多线程对话、知识库整合、上下文记忆、智能搜索与可见即可得的 AI 文档编辑器，**为用户提供从创意萌发到成品内容的一站式解决方案：**
 
-## 前置条件
+1. 在自由画布上进行多主题&多线程对话功能，让您借助 AI 自由发散思维，梳理创作思路
+2. 集成写作素材与 AI 知识库，打造强大的第二大脑系统
+3. 采用类似 Cursor 和 NotebookLM 的上下文记忆功能，实现精准定位修改
+4. 内置类 Perplexity 的 AI 全网搜索与知识库检索，突破信息获取瓶颈
+5. 融合 Notion 风格的 AI 编辑器与 ChatGPT Canvas 式文档处理体验，让创作更加行云流水
 
-在开始之前，请确保您已经：
+### 1 分钟视频极速了解
 
-- 安装了 Node.js
-- 对文档系统有基本了解
+## 0. 加入反馈群
 
-## 安装
+[Untitled](Untitled%20160162107b438044b7f4e2f87bb965f3/Untitled%2017c162107b4380ef8294d962baf5a830.csv)
 
-```bash
-# 克隆仓库
-git clone https://github.com/your-account/your-project
+查看最近产品更新：
 
-# 安装依赖
-npm install
+- [2025.01.14 - v0.2.1](https://powerformer.feishu.cn/wiki/Wyg2wgIfJiGBE0ktoQ0cbSOhnVb?fromScene=spaceOverview)：Refly 在 0.2.1 中发布 5+ 新功能，优化 10+ 核心重点问题，解决 7+ 基础问题/Bug，本次发布核心重点是**：正式推出分级付费订阅功能(Free/Pro/Max)，首年赠送 2 个月，再优惠 50% 🔥，无限使用 Claude 3.5 Sonnet/GPT-4o 仅 8.3 美刀/月，时间有限有需求的宝子们可以赶紧冲 🐛；**同时大幅增强了 Memo 节点的 AI 交互能力，优化了多项用户体验(如多选节点、画布重命名等)，并修复了登录状态、网络连接、白屏等关键性问题。
+- [2025.01.07 - v0.2.0](https://powerformer.feishu.cn/wiki/ECgxwwU0BilpzuknN0Cc7Jf8npc) ：**本次更新正式发布 v0.2.0，支持了 8+ 重磅新能力，全面支持 AI + 画布更加直观易懂的操作体验，大幅度优化了画布性能，对标 Native/本地 App 的使用体验**，包括如下能力：画布新增 Memo 节点、画布新增 Skill/Ask AI 节点、支持更多明星开源模型、支持分组和批量操作节点的能力、新增空画布引导和画布菜单、更好的节点菜单引导、更好的 AI 回答处理、支持更多的登录注册方式、更好的画布性能和使用体验、更好的节点自动布局能力支持、更一致的上下文列表展示
+- [2024.12.23 - v0.1.2](https://powerformer.feishu.cn/wiki/EBbRwix3Jiq5zGkSfjCcuPS1nJX)：本次更新共优化 **31+ 项内容**🔥，核心包括新增更多模型（Open O1 等），支持同时运行多个 AI 回答，支持所有技能可以使用上下文和聊天历史，支持编辑文档技能可以智能感知文档内容编辑，处理语言问题等和极大幅度优化服务速度，系统延迟加载优化 80% 以上（因用户网络环境不同可能有所区别），同时彻底修复生成文档技能为空的问题 等。
+- [2024.12.18 - v0.1.1](https://powerformer.feishu.cn/wiki/CSbawJE1hiY3ezkDmbfcWmorn47) ：本次更新包含 **12 个主要更新**，主要包括支持侧边栏删除画布和最多展示 10 个画布、默认隐藏节点连线、画布展示更新同步状态、数据导入文本扩展至 10W 字、优化浏览器语言设置、新注册用户 AI 回答语言默认设置为 Auto、优化追问逻辑、预览卡片定位功能、修复卡片菜单栏问题、处理报错或崩溃情况、画布性能优化及修复多项输出语言和数据同步问题。
 
-# 启动开发服务器
-npm run docs:dev
-```
+## 1. 产品简介
 
-## 下一步
+### Refly 是什么
 
-安装完成后，您可以：
+Refly 是一个基于「**自由画布**」理念构建的 AI 原生内容创作平台，通过多线程对话、知识库整合、上下文记忆、智能搜索与可见即可得的 AI 文档编辑器，**为用户提供从创意萌发到成品内容的一站式解决方案：**
 
-1. 浏览文档
-2. 修改内容
-3. 部署您自己的版本
+1. 在自由画布上进行多主题&多线程对话功能，让您借助 AI 自由发散思维，梳理创作思路
+2. 集成写作素材与 AI 知识库，打造强大的第二大脑系统
+3. 采用类似 Cursor 和 NotebookLM 的上下文记忆功能，实现精准定位修改
+4. 内置类 Perplexity 的 AI 全网搜索与知识库检索，突破信息获取瓶颈
+5. 融合 Notion 风格的 AI 编辑器与 ChatGPT Canvas 式文档处理体验，让创作更加行云流水
+
+### 1 分钟视频极速了解
+
+### 3 分钟视频快速了解
+
+### 20 分钟视频详细了解
+
+### 核心功能和价值
+
+Refly 旨在 「**让创作者专注思考，AI 助力高效创作**」。
+
+因此我们实现了 4 大核心能力：
+
+1. **智能画布｜让思维可视化**
+   1. 自由画布助您理清思路，轻松组织创意
+   2. 覆盖学术研究、法律文献研究、投资分析或技术文档等 10+ 场景
+   3. AI 智能分析主题，自动生成研究框架
+   4. 个人知识库集成，激发深度思维连接
+2. **知识管理｜让信息更有序**
+   1. 一键导入论文、网页等多种专业资料
+   2. AI 智能搜索，快速定位核心参考内容
+   3. 自动关联知识点，激发跨领域创新
+   4. 与已有知识系统无缝对接
+3. **多线程对话｜让创作更高效**
+   1. 画布式对话探索，深入研究主题
+   2. 智能管理上下文，让对话更聚焦
+   3. 随时调用知识库，突破研究瓶颈
+   4. 支持实时协作，集思广益
+4. **专业创作｜让输出更专业**
+   1. 个性化写作环境，自由调节创作场景
+   2. 专业写作工具，助力学术技术内容
+   3. AI 编辑助手，把控内容质量
+   4. 结构化输出，确保专业表达
+
+### 适用场景和用户群体
+
+无论您是写论文的学生、做副业的上班族，还是经营自媒体的创作者，都能找到适合的使用场景。
+
+|                          | 场景                                   | 效果                                              | 好处                           |
+| ------------------------ | -------------------------------------- | ------------------------------------------------- | ------------------------------ |
+| **内容创作者**           | 写文章、小红书笔记、公众号、短视频脚本 | 30 分钟生成吸引眼球的标题和内容框架，激发创意灵感 | 告别内容枯竭，提升创作效率     |
+| **知识工作者**           | 年终总结、工作汇报、项目方案           | 快速梳理要点，生成专业表达                        | 节省 50%写作时间，提升文档质量 |
+| **学术/法律/投资研究者** | 论文写作、文献综述、研究计划           | 智能分析文献，提炼核心观点                        | 大幅提升研究效率，确保学术规范 |
+| **企业管理者**           | 战略规划、述职报告、会议纪要           | 快速整合信息，形成决策依据                        | 提升管理效率，优化决策质量     |
+| **自由职业者**           | 写作接单、提案策划、商业文案           | 一键生成多风格内容                                | 提高接单效率，保证交付质量     |
+| **小型团队**             | 产品文档、培训材料、团队协作           | 统一文档标准，共享知识资产                        | 降低沟通成本，提升团队效率     |
+
+## 2. 开始使用
+
+### 如何注册/登录？
+
+访问 https://refly.ai/ ，点击开始使用，使用 Google 或 Github 登录授权。
+
+### 系统要求
+
+Refly 是一个基于浏览器的在线产品，任何操作系统使用谷歌/Chrome 浏览器即可打开，其他浏览器如微软 Edge 或者火狐 Firefox、Arc 浏览器等也支持。
+
+## 3. 基础功能指南
+
+让我们从一个用户故事出发了解 Refly 的核心使用流程，比如我们要创建一篇关于最新发布的「OpenAI Sora」的文章。
+
+### 基于自由画布梳理创作思路
+
+首先，您可以在 Refly 的**自由画布**中生成一个各种和 Sora 有关技术的提问，然后了解每个部分的实现原理，当你基本上对 Sora 的技术和产品有一定了解之后，你就可以基于某个节点主题进行继续追问，深入发散，一步步了解更深的概念。
+
+更神奇的是，每一步都代表的你的自由发散提问思考的过程，且这些过程都不会相互影响，除非您手动基于某个节点提问或者添加为上下文（**悬浮在每个节点上面的「添加上下文/追问」**），这为您提供了**基于某个主题深入追问或者基于多个主题自由思考的能力**，非常的自由！
+
+[https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=NThiOTkxZjMwYmJjZTUyNTFkNjAyYWEwOTgwYzlkZmZfWDk1ajNKVkV4VWRWSDFaMVRFcDk4VzY5eHVBR1p5SjhfVG9rZW46UVNON2JYeGJib1FLWkh4c3VvQmNvQzRsbmplXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA](https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=NThiOTkxZjMwYmJjZTUyNTFkNjAyYWEwOTgwYzlkZmZfWDk1ajNKVkV4VWRWSDFaMVRFcDk4VzY5eHVBR1p5SjhfVG9rZW46UVNON2JYeGJib1FLWkh4c3VvQmNvQzRsbmplXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA)
+
+### 使用内建 AI 搜索或上传写作素材
+
+当你大概了解 Sora 的原理以及派生技术之后，你就可以开始准备创作的素材了！点击 Refly 左侧的悬浮按钮，选择第二个按钮「添加资源」，您可以通过**在线搜索**、复制网页链接或纯文本一键将你感兴趣的素材添加到自由画布中以用于后续的研究。
+
+每个添加的素材会自动进行 AI 语义处理，使得您可以使用「知识库搜索」技能对所有的资源进行语义搜索提问，简直就像配备一个基于全网内容和自己私域知识的 AI 搜索引擎 Perplexity！
+
+[https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=NWY0ZGFlZTkxNDQ3YmJiMmZhYzY5NTQ1NDBmMjVlMGVfYWNtaW9mZm1wN1ZDYUlQMk9xMDlWOGc5OTc1Q0VHQTNfVG9rZW46R25YdWI4UnVzb1ZMZUN4T1FpYWNHdlJDbmpjXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA](https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=NWY0ZGFlZTkxNDQ3YmJiMmZhYzY5NTQ1NDBmMjVlMGVfYWNtaW9mZm1wN1ZDYUlQMk9xMDlWOGc5OTc1Q0VHQTNfVG9rZW46R25YdWI4UnVzb1ZMZUN4T1FpYWNHdlJDbmpjXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA)
+
+### 多线程会话进行创作研究
+
+当您导入了待写作的素材之后，就可以基于素材进行 AI 提问，比如**对某个素材进行总结、翻译或者生成表格**，使用画布左边的第一个按钮「框选模式」或悬浮在每个节点上面的「添加上下文/追问」按钮**选择多个素材**进行总结、翻译或提出任何想问的问题！
+
+当然，整个研究的过程中，Refly 还提供了「全网搜索」、「知识库搜索」等诸多好用的技能，可以一键调用，对全网相关的内容或者自己已经保存的所有素材进行**智能语义搜索**，不放过每一个细节！
+
+[https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=YWFjZWNiNGYwYzJjMjA0OWY3YzNmNzMyMzU1YWM2OTRfVWtWRnBjdWJ4cnpBTDFRWDZqNUt1WG9LRnVyM0V4alJfVG9rZW46TVZhYWJLTW50bzdsUVp4anV0OGNBdVowbkhnXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA](https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=YWFjZWNiNGYwYzJjMjA0OWY3YzNmNzMyMzU1YWM2OTRfVWtWRnBjdWJ4cnpBTDFRWDZqNUt1WG9LRnVyM0V4alJfVG9rZW46TVZhYWJLTW50bzdsUVp4anV0OGNBdVowbkhnXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA)
+
+### 使用 AI 编辑器写作
+
+终于到了最激动人心的环节，您可以通过「生成文档」的技能快速生成一篇文档，或者使用侧边栏的「新文档」生成一篇文档，最有用的是，您在生成文档的过程中，可以选择任意画布中的素材（只需要点击悬浮在每个节点上面的「添加上下文/追问」按钮），结合素材提问然后生成文档，使得您的文档是专属于您写作目标的内容！
+
+当然您也可以独立的完成每一个 AI 提问或者基于主题的深入探究，然后使用回答节点上的「插入」按钮，一键将有用的内容插入到文章中，这样一步一步就可以结合 AI 的辅助便捷的生成一篇可用的文档！
+
+当然这个时候你可能会问了，我每一步都是通过 AI 生成，那么整体不是显得很乱吗？别着急！Refly 提供的文档编辑器自带丰富的富文本操作能力，您可以通过提供的富文本工具快速排版，当然，也支持一键选中内容让 AI 给你排版或者编辑，怎么样，非常贴心有木有！😆
+
+[https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=M2UyNmJmMzgyNTE4MWJjM2IxYTExNDIzMzc4YzZlMmRfbXZQYW9OM0NweTRJWlVFWXZFUW9memg4cjF5aDJHYzRfVG9rZW46TzZqeGJSSVhVb2x6cUd4M0NsemNyMnJvbndkXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA](https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=M2UyNmJmMzgyNTE4MWJjM2IxYTExNDIzMzc4YzZlMmRfbXZQYW9OM0NweTRJWlVFWXZFUW9memg4cjF5aDJHYzRfVG9rZW46TzZqeGJSSVhVb2x6cUd4M0NsemNyMnJvbndkXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA)
+
+好啦！通过上面的步骤，您掌握了使用 Refly AI 帮助您高效完成从想法创意到高质量内容的秘笈！接下来就教给您自由探索啦～ 祝您好运 🍀
+
+## 5. 常见问题解答
+
+### 问题反馈
+
+目前还在内测期间，可能遇到一些可用性问题，不过我们会马上跟进修复！如果您遇到了报错其他问题，可以复制报错的排查码并立即甩在我们的脸上！我们会马上跟进修复！比如下面的报错。TraceID 即为错误码！
+
+[https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=OGVmMGViYzA5NzM5NWIyNDVlMzk5ZTNkMDJmYTkzYWVfTUY5NEFMeHJCcTRaRjkwVDg5ZDY0VVQyS09LdDBVZGJfVG9rZW46RnR1RWJsVXowb2t4Rm94aU9QdWNZT2QxbmtnXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA](https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=OGVmMGViYzA5NzM5NWIyNDVlMzk5ZTNkMDJmYTkzYWVfTUY5NEFMeHJCcTRaRjkwVDg5ZDY0VVQyS09LdDBVZGJfVG9rZW46RnR1RWJsVXowb2t4Rm94aU9QdWNZT2QxbmtnXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA)
+
+### 打开落地页报错
+
+[https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=MzdiYWY3OWIzYzFkMzAyNWRkMWZlNzMwMzZkZjUyMjlfZFFVQVFlS3l3NmFmOGk3OHBMYzF2N1BmWkxCczFoTzJfVG9rZW46WmN5NGJzbUlKb0xNMTN4cnZyM2N5YkZvbmRoXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA](https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=MzdiYWY3OWIzYzFkMzAyNWRkMWZlNzMwMzZkZjUyMjlfZFFVQVFlS3l3NmFmOGk3OHBMYzF2N1BmWkxCczFoTzJfVG9rZW46WmN5NGJzbUlKb0xNMTN4cnZyM2N5YkZvbmRoXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA)
+
+这种情况是因为 Refly 整体的登录授权体系发生了变化，之前参与内测已经登录的同学会遇到，只需要点击「开始使用」正常登录即可。
+
+### 画布数据加载不出来或一直加载中...，疑似丢失
+
+常见情况如下：
+
+[https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmM0ODQ0MThmMjk2ZjkyN2I2ZGU5NjViYmFmMDE1ZTZfVVRpNTg5NmVmNWRBWHRYcEJrU05oOEk4anhnNXBlVmFfVG9rZW46VFZ4S2Jhb0VQb0tYNUZ4R1JWSWNqSUxTbkNoXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA](https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmM0ODQ0MThmMjk2ZjkyN2I2ZGU5NjViYmFmMDE1ZTZfVVRpNTg5NmVmNWRBWHRYcEJrU05oOEk4anhnNXBlVmFfVG9rZW46VFZ4S2Jhb0VQb0tYNUZ4R1JWSWNqSUxTbkNoXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA)
+
+[https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=NWEwZDFjZTZkMDdlOGRmN2IwZThkZDIxZjgzM2VlZGZfMXVqOElhaUpWNzZZalhqWlp2TUJxaWl1RHhoUjllZmxfVG9rZW46RDQ1NmJxQW92b0loeTl4UnNhaWNWMWZFbmJjXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA](https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=NWEwZDFjZTZkMDdlOGRmN2IwZThkZDIxZjgzM2VlZGZfMXVqOElhaUpWNzZZalhqWlp2TUJxaWl1RHhoUjllZmxfVG9rZW46RDQ1NmJxQW92b0loeTl4UnNhaWNWMWZFbmJjXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA)
+
+这种情况是之前参与过 Refly 内测的同学，本地存在缓存导致的，只需要点击左下角的用户头像 - 选择登出，然后重新登录即可！
+
+[https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=YjEwMjQ2YTZlNzI2ZGFjNGYwZWJhZmYzOTY3MzdhOGNfbzhQc2sxNm04RktWTUpzR2Q4NU5UdFNiSW5zUnFBanVfVG9rZW46RjhGMGI5WTRPbzFkMnd4QnFlZWM4S0dEbkVoXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA](https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=YjEwMjQ2YTZlNzI2ZGFjNGYwZWJhZmYzOTY3MzdhOGNfbzhQc2sxNm04RktWTUpzR2Q4NU5UdFNiSW5zUnFBanVfVG9rZW46RjhGMGI5WTRPbzFkMnd4QnFlZWM4S0dEbkVoXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA)
+
+## 6. 获取帮助 & 加入反馈群
+
+加入飞书群：
+
+暂时无法在飞书文档外展示此内容
+
+关注 Refly.AI 公众号，查收最新特性 👇
+
+[https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWQ4YTc2ZWQ0MDNhMmY1ZmQwZmJkZDhkNzQ4OGRjYmNfMVdzQlRTT1JxbU1DbzUzTjB5R3VPYkl1QzNYaVR0dEVfVG9rZW46VVZ4UWJaWnpWb2dGcnB4eFNzbGNPNGNRbmFoXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA](https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWQ4YTc2ZWQ0MDNhMmY1ZmQwZmJkZDhkNzQ4OGRjYmNfMVdzQlRTT1JxbU1DbzUzTjB5R3VPYkl1QzNYaVR0dEVfVG9rZW46VVZ4UWJaWnpWb2dGcnB4eFNzbGNPNGNRbmFoXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA)
+
+可以访问「[联系我们](https://powerformer.feishu.cn/share/base/form/shrcnaVXPlMWxOC6cJDa7q3cPzd)」链接，加入我们内测反馈交流群，我们将第一时间为您答疑解惑！
+
+[https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=M2VmNGQyYTBiNmNiYTVjODlkZTQzZGUxYWQ2NmU4Y2Ffa1pEYVB2T1h6WUZBYjJ3M1JlTE9nRTRXOERBRjl5a0FfVG9rZW46UWpXSWJxcnBwb0J5dEF4bk1YdGNScmU2bjRjXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA](https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=M2VmNGQyYTBiNmNiYTVjODlkZTQzZGUxYWQ2NmU4Y2Ffa1pEYVB2T1h6WUZBYjJ3M1JlTE9nRTRXOERBRjl5a0FfVG9rZW46UWpXSWJxcnBwb0J5dEF4bk1YdGNScmU2bjRjXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA)
