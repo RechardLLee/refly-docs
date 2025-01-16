@@ -6,8 +6,8 @@ const enNav = [
   { text: "Community", link: "/community/contact-us" },
   { text: "About", link: "/about/privacy-policy" },
   {
-    text: "v0.2.1",
-    items: [{ text: "Changelog", link: "/changelog/v0.2.1" }],
+    text: "v0.2.2",
+    items: [{ text: "Changelog", link: "/changelog/v0.2.2" }],
   },
 ];
 
@@ -16,8 +16,8 @@ const zhNav = [
   { text: "社区", link: "/zh/community/contact-us" },
   { text: "关于", link: "/zh/about/privacy-policy" },
   {
-    text: "v0.2.1",
-    items: [{ text: "更新日志", link: "/zh/changelog/v0.2.1" }],
+    text: "v0.2.2",
+    items: [{ text: "更新日志", link: "/zh/changelog/v0.2.2" }],
   },
 ];
 
@@ -42,6 +42,7 @@ const sidebar = {
     {
       text: "Changelog",
       items: [
+        { text: "v0.2.2", link: "/changelog/v0.2.2" },
         { text: "v0.2.1", link: "/changelog/v0.2.1" },
         { text: "v0.2.0", link: "/changelog/v0.2.0" },
         { text: "v0.1.2", link: "/changelog/v0.1.2" },
@@ -68,6 +69,7 @@ const sidebar = {
     {
       text: "更新日志",
       items: [
+        { text: "v0.2.2", link: "/zh/changelog/v0.2.2" },
         { text: "v0.2.1", link: "/zh/changelog/v0.2.1" },
         { text: "v0.2.0", link: "/zh/changelog/v0.2.0" },
         { text: "v0.1.2", link: "/zh/changelog/v0.1.2" },
