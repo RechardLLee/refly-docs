@@ -133,7 +133,7 @@ Refly 是一个基于浏览器的在线产品，任何操作系统使用谷歌/C
 
 ### 问题反馈
 
-目前还在内测期间，可能遇到一些可用性问题，不过我们会马上跟进修复！如果您遇到了报错其他问题，可以复制报错的排查码并立即甩在我们的脸上！我们会马上跟进修复！比如下面的报错。TraceID 即为错误码！
+目前 Refly 已经全面开放并进入早期开放使用阶段，可能遇到一些可用性问题，不过我们会马上跟进修复！如果您遇到了报错其他问题，可以复制报错的排查码并立即甩在我们的脸上！我们会马上跟进修复！比如下面的报错。TraceID 即为错误码！
 
 [https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=OGVmMGViYzA5NzM5NWIyNDVlMzk5ZTNkMDJmYTkzYWVfTUY5NEFMeHJCcTRaRjkwVDg5ZDY0VVQyS09LdDBVZGJfVG9rZW46RnR1RWJsVXowb2t4Rm94aU9QdWNZT2QxbmtnXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA](https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=OGVmMGViYzA5NzM5NWIyNDVlMzk5ZTNkMDJmYTkzYWVfTUY5NEFMeHJCcTRaRjkwVDg5ZDY0VVQyS09LdDBVZGJfVG9rZW46RnR1RWJsVXowb2t4Rm94aU9QdWNZT2QxbmtnXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA)
 
@@ -159,12 +159,10 @@ Refly 是一个基于浏览器的在线产品，任何操作系统使用谷歌/C
 
 加入飞书群：
 
-暂时无法在飞书文档外展示此内容
-
 关注 Refly.AI 公众号，查收最新特性 👇
 
 [https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWQ4YTc2ZWQ0MDNhMmY1ZmQwZmJkZDhkNzQ4OGRjYmNfMVdzQlRTT1JxbU1DbzUzTjB5R3VPYkl1QzNYaVR0dEVfVG9rZW46VVZ4UWJaWnpWb2dGcnB4eFNzbGNPNGNRbmFoXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA](https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWQ4YTc2ZWQ0MDNhMmY1ZmQwZmJkZDhkNzQ4OGRjYmNfMVdzQlRTT1JxbU1DbzUzTjB5R3VPYkl1QzNYaVR0dEVfVG9rZW46VVZ4UWJaWnpWb2dGcnB4eFNzbGNPNGNRbmFoXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA)
 
-可以访问「[联系我们](https://powerformer.feishu.cn/share/base/form/shrcnaVXPlMWxOC6cJDa7q3cPzd)」链接，加入我们内测反馈交流群，我们将第一时间为您答疑解惑！
+可以访问「[联系我们](/community//contact-us.md)」链接，加入我们内测反馈交流群，我们将第一时间为您答疑解惑！
 
 [https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=M2VmNGQyYTBiNmNiYTVjODlkZTQzZGUxYWQ2NmU4Y2Ffa1pEYVB2T1h6WUZBYjJ3M1JlTE9nRTRXOERBRjl5a0FfVG9rZW46UWpXSWJxcnBwb0J5dEF4bk1YdGNScmU2bjRjXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA](https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=M2VmNGQyYTBiNmNiYTVjODlkZTQzZGUxYWQ2NmU4Y2Ffa1pEYVB2T1h6WUZBYjJ3M1JlTE9nRTRXOERBRjl5a0FfVG9rZW46UWpXSWJxcnBwb0J5dEF4bk1YdGNScmU2bjRjXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA)
