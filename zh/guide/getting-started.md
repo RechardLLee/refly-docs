@@ -13,7 +13,7 @@ Refly 是一个基于「**自由画布**」理念构建的 AI 原生内容创作
 ### 1 分钟视频极速了解
 
 <div style="padding: 20px 0;">
-<iframe width="100%" height="415" src="https://www.youtube.com/watch?v=8UmN-Zj3Dlk" title="Refly Quick Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="415" style="border-radius: 10px;" src="https://www.youtube.com/embed/MWgWy_LBtko" title="Refly Quick Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## 0. 最近产品更新
@@ -156,8 +156,14 @@ Refly 是一个基于浏览器的在线产品，任何操作系统使用谷歌/C
 
 关注 Refly.AI 公众号，查收最新特性 👇
 
-[https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWQ4YTc2ZWQ0MDNhMmY1ZmQwZmJkZDhkNzQ4OGRjYmNfMVdzQlRTT1JxbU1DbzUzTjB5R3VPYkl1QzNYaVR0dEVfVG9rZW46VVZ4UWJaWnpWb2dGcnB4eFNzbGNPNGNRbmFoXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA](https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWQ4YTc2ZWQ0MDNhMmY1ZmQwZmJkZDhkNzQ4OGRjYmNfMVdzQlRTT1JxbU1DbzUzTjB5R3VPYkl1QzNYaVR0dEVfVG9rZW46VVZ4UWJaWnpWb2dGcnB4eFNzbGNPNGNRbmFoXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA)
+![wechat-group](/public/zh/images/wechat-group-qrcode.png)
 
-可以访问「[联系我们](/community//contact-us.md)」链接，加入我们内测反馈交流群，我们将第一时间为您答疑解惑！
+可以访问「[联系我们](/zh/community//contact-us.md)」链接，加入我们内测反馈交流群，我们将第一时间为您答疑解惑！
 
-[https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=M2VmNGQyYTBiNmNiYTVjODlkZTQzZGUxYWQ2NmU4Y2Ffa1pEYVB2T1h6WUZBYjJ3M1JlTE9nRTRXOERBRjl5a0FfVG9rZW46UWpXSWJxcnBwb0J5dEF4bk1YdGNScmU2bjRjXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA](https://powerformer.feishu.cn/space/api/box/stream/download/asynccode/?code=M2VmNGQyYTBiNmNiYTVjODlkZTQzZGUxYWQ2NmU4Y2Ffa1pEYVB2T1h6WUZBYjJ3M1JlTE9nRTRXOERBRjl5a0FfVG9rZW46UWpXSWJxcnBwb0J5dEF4bk1YdGNScmU2bjRjXzE3MzY5NTQxNjk6MTczNjk1Nzc2OV9WNA)
+飞书 👇：
+
+![feishu](/public/zh/images/lark-qrcode.png)
+
+微信群 👇：
+
+![wechat](/public/zh/images/wechat-qrcode.png)

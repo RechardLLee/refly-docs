@@ -6,10 +6,10 @@ Join our community to get help, share your experience, and connect with other Re
 
 Join our Discord server for real-time discussions and support:
 
+Discord 👉 [https://discord.com/invite/bWjffrb89h](https://discord.com/invite/bWjffrb89h)
+
 ## GitHub Discussions
 
 ::: tip Note
 Open source is coming soon, please contact us via email: support@refly.ai
 :::
-
-For technical discussions and feature requests, you can use GitHub Discussions:
