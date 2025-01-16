@@ -92,6 +92,34 @@ export default defineConfig({
         nav: enNav,
         sidebar: sidebar.en,
         siteTitle: "Refly Docs",
+        outlineTitle: "On this page",
+        docFooter: {
+          prev: "Previous page",
+          next: "Next page",
+        },
+        returnToTopLabel: "Return to top",
+        sidebarMenuLabel: "Menu",
+        darkModeSwitchLabel: "Theme",
+        search: {
+          provider: "local",
+          options: {
+            translations: {
+              button: {
+                buttonText: "Search",
+                buttonAriaLabel: "Search",
+              },
+              modal: {
+                noResultsText: "No results for",
+                resetButtonTitle: "Reset search",
+                footer: {
+                  selectText: "to select",
+                  navigateText: "to navigate",
+                  closeText: "to close",
+                },
+              },
+            },
+          },
+        },
       },
     },
     zh: {
@@ -103,6 +131,34 @@ export default defineConfig({
         nav: zhNav,
         sidebar: sidebar.zh,
         siteTitle: "Refly 文档",
+        outlineTitle: "本页目录",
+        docFooter: {
+          prev: "上一页",
+          next: "下一页",
+        },
+        returnToTopLabel: "返回顶部",
+        sidebarMenuLabel: "菜单",
+        darkModeSwitchLabel: "主题",
+        search: {
+          provider: "local",
+          options: {
+            translations: {
+              button: {
+                buttonText: "搜索",
+                buttonAriaLabel: "搜索",
+              },
+              modal: {
+                noResultsText: "未找到相关结果",
+                resetButtonTitle: "清除搜索",
+                footer: {
+                  selectText: "选择",
+                  navigateText: "切换",
+                  closeText: "关闭",
+                },
+              },
+            },
+          },
+        },
       },
     },
   },
