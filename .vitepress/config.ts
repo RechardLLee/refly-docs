@@ -12,7 +12,7 @@ const sidebar = {
     },
     {
       text: "Community",
-      items: [{ text: "Feedback Group", link: "/community/feedback-group" }],
+      items: [{ text: "Contact Us", link: "/community/contact-us" }],
     },
     {
       text: "Changelog",
@@ -31,7 +31,7 @@ const sidebar = {
     },
     {
       text: "社区",
-      items: [{ text: "反馈群", link: "/zh/community/feedback-group" }],
+      items: [{ text: "联系我们", link: "/zh/community/contact-us" }],
     },
     {
       text: "更新日志",
@@ -49,6 +49,9 @@ export default defineConfig({
   // Site metadata
   title: "Refly Docs",
   description: "Refly Documentation",
+
+  // Remove .html extensions from URLs
+  cleanUrls: true,
 
   // i18n configuration
   locales: {
