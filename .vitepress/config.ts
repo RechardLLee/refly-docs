@@ -67,6 +67,12 @@ export default defineConfig({
   // Remove .html extensions from URLs
   cleanUrls: true,
 
+  // Redirect root to getting-started
+  rewrites: {
+    "index.md": "guide/getting-started.md",
+    "zh/index.md": "zh/guide/getting-started.md",
+  },
+
   // i18n configuration
   locales: {
     root: {
