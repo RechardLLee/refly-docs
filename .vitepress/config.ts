@@ -1,7 +1,18 @@
 import { defineConfig } from "vitepress";
 
 // Single navigation item
-const nav = [{ text: "Refly", link: "https://refly.ai" }];
+const nav = [
+  { text: "Refly", link: "https://refly.ai" },
+  {
+    text: "v0.2.1",
+    items: [
+      { text: "v0.2.1", link: "/changelog/v0.2.1" },
+      { text: "v0.2.0", link: "/changelog/v0.2.0" },
+      { text: "v0.1.2", link: "/changelog/v0.1.2" },
+      { text: "v0.1.1", link: "/changelog/v0.1.1" },
+    ],
+  },
+];
 
 // Sidebar translations
 const sidebar = {
@@ -67,12 +78,6 @@ export default defineConfig({
   // Remove .html extensions from URLs
   cleanUrls: true,
 
-  // Redirect root to getting-started
-  rewrites: {
-    "index.md": "guide/getting-started.md",
-    "zh/index.md": "zh/guide/getting-started.md",
-  },
-
   // i18n configuration
   locales: {
     root: {
@@ -111,5 +116,10 @@ export default defineConfig({
 
     // Language selection
     langMenuLabel: "Change Language",
+
+    // Enable search
+    search: {
+      provider: "local",
+    },
   },
 });
