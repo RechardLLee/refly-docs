@@ -12,13 +12,13 @@ Discord 👉 [https://discord.com/invite/bWjffrb89h](https://discord.com/invite/
 
 扫描下方二维码加入关注我们的微信公众号：
 
-![wechat](/public/zh/images/wechat-group-qrcode.png)
+![wechat](/zh/images/wechat-group-qrcode.png)
 
 ## 微信群
 
 扫描下方二维码加入我们的微信群：
 
-![wechat](/public/zh/images/wechat-qrcode.png)
+![wechat](/zh/images/wechat-qrcode.png)
 
 ::: tip 提示
 如果二维码过期，请通过邮件联系我们：support@refly.ai
@@ -28,4 +28,4 @@ Discord 👉 [https://discord.com/invite/bWjffrb89h](https://discord.com/invite/
 
 加入我们的飞书群，获取实时讨论和支持：
 
-![feishu](/public/zh/images/lark-qrcode.png)
+![feishu](/zh/images/lark-qrcode.png)
