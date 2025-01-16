@@ -158,7 +158,7 @@ Refly 是一个基于浏览器的在线产品，任何操作系统使用谷歌/C
 
 ![wechat-group](/public/zh/images/wechat-group-qrcode.png)
 
-可以访问「[联系我们](/zh/community//contact-us.md)」链接，加入我们内测反馈交流群，我们将第一时间为您答疑解惑！
+可以访问「[联系我们](/zh/community/contact-us.md)」链接，加入我们内测反馈交流群，我们将第一时间为您答疑解惑！
 
 飞书 👇：
 
