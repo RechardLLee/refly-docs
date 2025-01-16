@@ -1,60 +1,114 @@
 ---
 title: Privacy Policy
-description: Refly Privacy Policy
+description: Refly AI Content Creation Engine Privacy Policy
 ---
 
 # Privacy Policy
 
 > Effective Date: January 16, 2025
 
-At ReflyAI, we are committed to protecting the privacy and security of our users. This Privacy Policy describes the types of information we may collect from you or that you may provide when you use our AI Search Engine ("Service") and our practices for collecting, using, maintaining, protecting, and disclosing that information.
+At ReflyAI, we are committed to protecting your privacy and security. This Privacy Policy describes the types of information we may collect from you when you use our AI Content Creation Engine (the "Service"), and our practices for collecting, using, maintaining, protecting, and disclosing that information. This policy complies with international privacy protection standards, including the European Union General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA).
+
+## Legal Basis (Applicable to EU Users)
+
+Our legal bases for processing your personal data include:
+
+- Performance of our contract with you
+- Compliance with legal obligations
+- Our legitimate interests
+- Your consent
 
 ## Information We Collect
 
 ### Information You Provide to Us
 
-- **Account Information**: If you create an account, we may collect your name, email address, and password.
-- **Search Queries**: We collect the search queries you input into our Service to provide search results and improve our Service.
-- **Browser History**: If you use our service, we may collect your browser history to provide personalized search results and improve our service. Browser history includes information such as the web pages you visit, links you click on, and features you use.
+- **Account Information**: Basic information when creating an account, including name, email address, and password.
+- **Content Creation Data**: Prompts, topics, preferences, and other information you input when using our AI creation service.
+- **User-Generated Content**: Content created through our service and its associated metadata.
+- **Feedback and Interactions**: Your feedback on generated content, editing history, and usage preferences.
 
-### Information We Collect Automatically
+### Information We Automatically Collect
 
-- **Usage Details**: When you access and use our Service, we automatically collect details of your access to and use of our Service, including traffic data, location data, logs, and other communication data and the resources that you access and use on or through our Service.
-- **Device Information**: We collect information about your device, including IP address, operating system, browser type, and device identifiers.
+- **Usage Data**: Service usage statistics including access times, duration of use, and feature usage frequency.
+- **Technical Data**: Device information (IP address, device type, operating system, browser type), performance data, and error reports.
+- **AI Model Interaction Data**: Technical data generated from interactions with our AI models, used to improve service quality.
 
 ### Cookies and Tracking Technologies
 
-- We use cookies and similar tracking technologies to track activity on our Service and hold certain information.
+We use cookies and similar technologies to:
+
+- Maintain your login status
+- Remember your preferences
+- Analyze service usage
+- Provide personalized experiences
+
+You can control cookie usage through your browser settings.
 
 ### Payment Information
 
-- **Payment and Billing Information**: If you purchase a subscription or service from us, we may collect payment and billing information. This includes your credit card number, billing address, and other information necessary for processing payments. We use secure payment processing services to handle transactions and do not store your credit card information on our servers.
+- **Payment Processing**: All payments are processed through secure third-party payment processors; we do not store complete payment card information.
+- **Billing Records**: We retain necessary billing records as required by law.
 
-### Information We Do Not Collect
+## Your Data Rights
 
-- **Sensitive Personal Information**: We do not collect sensitive personal information such as Social Security numbers, genetic data, health information, or religious beliefs.
+Based on your location's applicable laws, you have the following rights:
 
-## How We Use Your Information
+- **Right to Access**: Obtain a copy of your personal data we hold
+- **Right to Rectification**: Correct inaccurate personal data
+- **Right to Erasure**: Request deletion of your personal data
+- **Right to Data Portability**: Receive your data in a structured format
+- **Right to Object**: Object to the processing of your personal data
+- **Right to Withdraw Consent**: Withdraw previous consent at any time
+- **Right to Complain**: File a complaint with supervisory authorities
 
-We use the information we collect about you or that you provide to us, including any personal information:
+## Data Retention
 
-- To provide you with our Service and its contents, and any other information, products or services that you request from us.
-- To fulfill the purposes for which you provided the information or that were described when it was collected, or any other purpose for which you provide it.
-- To give you notices about your account and subscription, including expiration and renewal notices.
-- To carry out our obligations and enforce our rights arising from any contracts entered into between you and us, including for billing and collection.
-- To notify you about changes to our Service or any products or services we offer or provide through it.
-- To improve our Service, products, and services, and to develop new ones.
-- To measure or understand the effectiveness of the advertising we serve to you and others, and to deliver relevant advertising to you.
-- For any other purpose with your consent.
+We retain your personal data only for as long as necessary:
+
+- Account-related data: Duration of account existence
+- Generated content: 30 days after deletion or account termination
+- Payment records: As required by law (typically 7 years)
+
+## International Data Transfers
+
+We may process your data globally. We ensure:
+
+- Implementation of appropriate data transfer mechanisms
+- Adequate data protection measures
+- Compliance with relevant data protection regulations
 
 ## Data Security
 
-We implement measures designed to protect your personal information from accidental loss and from unauthorized access, use, alteration, and disclosure. However, the transmission of information via the internet is not completely secure, and we cannot guarantee the security of your personal information transmitted to our Service.
+We implement multi-layered security measures to protect your data:
 
-## Changes to Our Privacy Policy
+- Data encryption in transit and at rest
+- Access control and authentication
+- Regular security audits
+- Employee security training
 
-We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes.
+## AI Model and Algorithm Transparency
+
+We commit to:
+
+- Informing you about basic AI system operations
+- Clearly identifying AI-generated content
+- Maintaining algorithmic decision transparency
+- Continuously monitoring and reducing potential biases
+
+## Children's Privacy
+
+Our service is not directed at children under 13. We will promptly delete any inadvertently collected children's data.
+
+## Privacy Policy Updates
+
+We regularly update this policy to reflect legal requirements and service changes. You will be notified of significant changes.
 
 ## Contact Information
 
-To ask questions or comment about this Privacy Policy and our privacy practices, contact us at: [support@refly.ai](mailto:support@refly.ai).
+For privacy-related inquiries:
+
+- Email: [privacy@refly.ai](mailto:privacy@refly.ai)
+- Data Protection Officer: [dpo@refly.ai](mailto:dpo@refly.ai)
+- EU Representative (for GDPR): [eu-rep@refly.ai](mailto:eu-rep@refly.ai)
+
+For urgent privacy matters, we commit to responding within 72 hours.
