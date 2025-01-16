@@ -1,16 +1,19 @@
 import { defineConfig } from "vitepress";
 
 // Single navigation item
-const nav = [
+const enNav = [
   { text: "Refly", link: "https://refly.ai" },
   {
     text: "v0.2.1",
-    items: [
-      { text: "v0.2.1", link: "/changelog/v0.2.1" },
-      { text: "v0.2.0", link: "/changelog/v0.2.0" },
-      { text: "v0.1.2", link: "/changelog/v0.1.2" },
-      { text: "v0.1.1", link: "/changelog/v0.1.1" },
-    ],
+    items: [{ text: "Changelog", link: "/changelog/v0.2.1" }],
+  },
+];
+
+const zhNav = [
+  { text: "Refly", link: "https://refly.ai" },
+  {
+    text: "v0.2.1",
+    items: [{ text: "更新日志", link: "/zh/changelog/v0.2.1" }],
   },
 ];
 
@@ -86,7 +89,7 @@ export default defineConfig({
       title: "Refly Docs",
       description: "Refly Documentation",
       themeConfig: {
-        nav,
+        nav: enNav,
         sidebar: sidebar.en,
         siteTitle: "Refly Docs",
       },
@@ -97,7 +100,7 @@ export default defineConfig({
       title: "Refly 文档",
       description: "Refly 开发文档",
       themeConfig: {
-        nav,
+        nav: zhNav,
         sidebar: sidebar.zh,
         siteTitle: "Refly 文档",
       },
