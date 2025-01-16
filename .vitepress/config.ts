@@ -81,6 +81,9 @@ export default defineConfig({
   // Remove .html extensions from URLs
   cleanUrls: true,
 
+  // Configure head
+  head: [["link", { rel: "icon", href: "/logo/logo.svg" }]],
+
   // i18n configuration
   locales: {
     root: {
