@@ -24,10 +24,10 @@ const sidebar = {
     {
       text: "Changelog",
       items: [
-        { text: "版本 0.2.1", link: "/changelog/v0.2.1" },
-        { text: "版本 0.2.0", link: "/changelog/v0.2.0" },
-        { text: "版本 0.1.2", link: "/changelog/v0.1.2" },
-        { text: "版本 0.1.1", link: "/changelog/v0.1.1" },
+        { text: "v0.2.1", link: "/changelog/v0.2.1" },
+        { text: "v0.2.0", link: "/changelog/v0.2.0" },
+        { text: "v0.1.2", link: "/changelog/v0.1.2" },
+        { text: "v0.1.1", link: "/changelog/v0.1.1" },
       ],
     },
   ],
@@ -50,10 +50,10 @@ const sidebar = {
     {
       text: "更新日志",
       items: [
-        { text: "版本 0.2.1", link: "/zh/changelog/v0.2.1" },
-        { text: "版本 0.2.0", link: "/zh/changelog/v0.2.0" },
-        { text: "版本 0.1.2", link: "/zh/changelog/v0.1.2" },
-        { text: "版本 0.1.1", link: "/zh/changelog/v0.1.1" },
+        { text: "v0.2.1", link: "/zh/changelog/v0.2.1" },
+        { text: "v0.2.0", link: "/zh/changelog/v0.2.0" },
+        { text: "v0.1.2", link: "/zh/changelog/v0.1.2" },
+        { text: "v0.1.1", link: "/zh/changelog/v0.1.1" },
       ],
     },
   ],
