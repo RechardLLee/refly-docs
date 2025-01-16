@@ -15,6 +15,13 @@ const sidebar = {
       items: [{ text: "Contact Us", link: "/community/contact-us" }],
     },
     {
+      text: "About",
+      items: [
+        { text: "Privacy Policy", link: "/about/privacy-policy" },
+        { text: "Terms of Service", link: "/about/terms-of-service" },
+      ],
+    },
+    {
       text: "Changelog",
       items: [
         { text: "版本 0.2.1", link: "/changelog/v0.2.1" },
@@ -32,6 +39,13 @@ const sidebar = {
     {
       text: "社区",
       items: [{ text: "联系我们", link: "/zh/community/contact-us" }],
+    },
+    {
+      text: "关于",
+      items: [
+        { text: "隐私政策", link: "/zh/about/privacy-policy" },
+        { text: "服务条款", link: "/zh/about/terms-of-service" },
+      ],
     },
     {
       text: "更新日志",
