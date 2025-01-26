@@ -186,7 +186,9 @@ export default defineConfig({
     },
 
     // Social links
-    socialLinks: [{ icon: "github", link: "https://github.com/refly-ai" }],
+    socialLinks: [
+      { icon: "github", link: "https://github.com/refly-ai/refly" },
+    ],
 
     // Language selection
     langMenuLabel: "Change Language",
