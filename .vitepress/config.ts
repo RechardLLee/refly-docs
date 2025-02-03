@@ -32,7 +32,11 @@ const sidebar = {
   en: [
     {
       text: "Guide",
-      items: [{ text: "Getting Started", link: "/guide/getting-started" }],
+      items: [
+        { text: "Getting Started", link: "/guide/getting-started" },
+        { text: "Self-Deploy", link: "/guide/self-deploy" },
+        { text: 'Configuration', link: '/guide/configuration'}
+      ],
     },
     {
       text: "Community",
@@ -61,7 +65,11 @@ const sidebar = {
   zh: [
     {
       text: "指南",
-      items: [{ text: "快速开始", link: "/zh/guide/getting-started" }],
+      items: [
+        { text: "快速开始", link: "/zh/guide/getting-started" },
+        { text: "自主部署", link: "/zh/guide/self-deploy" },
+        { text: "配置", link: "/zh/guide/configuration" },
+      ],
     },
     {
       text: "社区",
