@@ -3,9 +3,11 @@ import { defineConfig } from "vitepress";
 // Single navigation item
 const enNav = [
   { text: "Refly", link: "https://refly.ai" },
-  { text: "Guide", link: "/guide/getting-started" },
+  {
+    text: "Add to Chrome",
+    link: "https://chromewebstore.google.com/detail/lecbjbapfkinmikhadakbclblnemmjpd",
+  },
   { text: "Community", link: "/community/contact-us" },
-  { text: "About", link: "/about/privacy-policy" },
   {
     text: "v0.2.4",
     items: [{ text: "Changelog", link: "/changelog/v0.2.4" }],
@@ -14,9 +16,11 @@ const enNav = [
 
 const zhNav = [
   { text: "Refly", link: "https://refly.ai" },
-  { text: "指南", link: "/zh/guide/getting-started" },
+  {
+    text: "添加到 Chrome",
+    link: "https://chromewebstore.google.com/detail/lecbjbapfkinmikhadakbclblnemmjpd",
+  },
   { text: "社区", link: "/zh/community/contact-us" },
-  { text: "关于", link: "/zh/about/privacy-policy" },
   {
     text: "v0.2.4",
     items: [{ text: "更新日志", link: "/zh/changelog/v0.2.4" }],
