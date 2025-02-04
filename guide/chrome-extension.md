@@ -18,28 +18,44 @@ The Refly Chrome extension is a powerful personal content management tool that h
 - After selection, choose to save or clip to your knowledge base
 - Support multiple selections and cumulative saving
 
-[Insert text selection demonstration image]
+<div style="padding: 20px 0;">
+<video width="100%" style="border-radius: 10px;" autoplay loop muted playsinline>
+  <source src="https://static.refly.ai/extension/text_selection_clip.mp4" type="video/mp4">
+</video>
+</div>
 
 #### 1.2 One-Click Page Saving
 - Save the entire webpage content through the right-side floating ball
 - Automatically extract main content, filtering out ads and irrelevant information
 - Preserve original formatting and images
 
-[Insert one-click saving demonstration image]
+<div style="padding: 20px 0;">
+<video width="100%" style="border-radius: 10px;" autoplay loop muted playsinline>
+  <source src="https://static.refly.ai/extension/whole_page_clip.mp4" type="video/mp4">
+</video>
+</div>
 
 #### 1.3 Popup Window Operations
 - Click the Refly icon in the browser's top-right corner
 - View and edit content to be saved in the popup window
 - Support content preview and quick editing
 
-[Insert popup window demonstration image]
+<div style="padding: 20px 0;">
+<video width="100%" style="border-radius: 10px;" autoplay loop muted playsinline>
+  <source src="https://static.refly.ai/extension/popup_clip.mp4" type="video/mp4">
+</video>
+</div>
 
 #### 1.4 Clipboard Enhancement
 - Support copying any content to clipboard
 - Paste and supplement content in the popup window
 - Support rich text format saving
 
-[Insert clipboard operation demonstration image]
+<div style="padding: 20px 0;">
+<video width="100%" style="border-radius: 10px;" autoplay loop muted playsinline>
+  <source src="https://static.refly.ai/extension/clipboard_clip_and_save.mp4" type="video/mp4">
+</video>
+</div>
 
 ### 2. Knowledge Base Integration
 
@@ -83,8 +99,6 @@ Refly supports content saving from various popular platforms, including:
 ### Others
 
 These are just some of the main platforms. Refly supports saving content from any webpage, allowing you to save whatever interests you.
-
-[Insert supported platforms preview image]
 
 ## Best Practices
 

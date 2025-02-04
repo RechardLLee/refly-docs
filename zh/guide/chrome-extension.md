@@ -17,28 +17,46 @@ Refly Chrome 插件是一个强大的个性化内容管理工具，帮助您轻�
 - 开启划线模式，选择需要保存的内容
 - 选中后可以选择保存或剪存到知识库
 
-[插入划线选择示意图]
+<div style="padding: 20px 0;">
+<video width="100%" style="border-radius: 10px;" autoplay loop muted playsinline>
+  <source src="https://static.refly.ai/extension/text_selection_clip.mp4" type="video/mp4">
+</video>
+</div>
 
 #### 1.2 一键剪存整页
 - 通过右侧悬浮球，一键保存整个网页内容
 - 自动提取网页的主要内容，过滤广告等无关信息
 - 保留原始格式和图片
 
-[插入一键剪存示意图]
+<div style="padding: 20px 0;">
+<video width="100%" style="border-radius: 10px;" autoplay loop muted playsinline>
+  <source src="https://static.refly.ai/extension/whole_page_clip.mp4" type="video/mp4">
+</video>
+</div>
+
 
 #### 1.3 弹出窗口操作
 - 点击浏览器右上角的 Refly 图标
 - 在弹出窗口中查看和编辑待保存的内容
 - 支持内容预览和快速编辑
 
-[插入弹出窗口示意图]
+<div style="padding: 20px 0;">
+<video width="100%" style="border-radius: 10px;" autoplay loop muted playsinline>
+  <source src="https://static.refly.ai/extension/popup_clip.mp4" type="video/mp4">
+</video>
+</div>
+
 
 #### 1.4 剪贴板增强
 - 支持复制任意内容到剪贴板
 - 在弹出窗口中粘贴并补充内容
 - 支持富文本格式保存
 
-[插入剪贴板操作示意图]
+<div style="padding: 20px 0;">
+<video width="100%" style="border-radius: 10px;" autoplay loop muted playsinline>
+  <source src="https://static.refly.ai/extension/clipboard_clip_and_save.mp4" type="video/mp4">
+</video>
+</div>
 
 ### 2. 知识库集成
 
@@ -83,7 +101,6 @@ Refly 支持多种常用平台的内容保存，包括：
 
 以上只是一些主要平台，Refly 支持保存任意网页内容，您可以随时保存您感兴趣的内容。
 
-[插入支持平台预览图]
 
 ## 最佳实践
 
