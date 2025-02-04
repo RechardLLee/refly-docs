@@ -47,7 +47,7 @@ The Refly Chrome extension is a powerful personal content management tool that h
 1. Clipped content is automatically saved to your knowledge base
 2. Support converting saved content into document format
 3. Edit, organize, and tag saved content
-4. Support adding notes and comments
+4. Support selecting partial content for note creation or AI queries
 
 ## Supported Platforms
 
@@ -91,6 +91,7 @@ These are just some of the main platforms. Refly supports saving content from an
 1. **Selective Saving**: Only save content that's valuable to you, avoid information overload
 2. **Timely Organization**: Regularly organize saved content to build your knowledge system
 3. **Privacy Protection**: Your data is securely encrypted and stored
+4. **Regular Review**: Periodically review and organize your saved content
 
 ## Troubleshooting
 
@@ -101,13 +102,6 @@ If you encounter any issues:
 3. Clear browser cache
 4. Restart the browser
 5. Contact support team if problems persist
-
-## Usage Tips
-
-- Use keyboard shortcuts for efficiency
-- Establish personal content saving workflow
-- Make good use of batch operations
-- Regularly backup important content
 
 ## Getting Help
 
