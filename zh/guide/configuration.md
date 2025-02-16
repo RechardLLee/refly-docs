@@ -12,17 +12,20 @@
 | PORT | HTTP API 服务端口，用于常规 API 请求 | `5800` |
 | WS_PORT | WebSocket 服务器端口，用于画布和文档的实时同步 | `5801` |
 | ORIGIN | 客户端来源（即访问 Refly 应用的地址），用于 CORS 检查 | `http://localhost:5700` |
+| ENDPOINT | API 端点，用于 Refly API 请求 | `http://localhost:5800` |
 | STATIC_ENDPOINT | 静态文件端点，用于提供静态文件服务 | `http://localhost:5800/v1/misc/` |
 
 ### 凭证配置
 
 | 环境变量 | 说明 | 默认值 |
 | --- | --- | --- |
-| OPENAI_API_KEY | [OpenAI](https://openai.com/) API 密钥，用于 LLM 推理和嵌入 | (未设置) |
+| OPENAI_API_KEY | [OpenAI](https://openai.com/) 或其他兼容供应方的 API 密钥，用于 LLM 推理和嵌入 | (未设置) |
+| OPENAI_BASE_URL | OpenAI 兼容供应方的基础 URL，用于 LLM 推理和嵌入 | `https://api.openai.com` |
 | OPENROUTER_API_KEY | [OpenRouter](https://openrouter.ai/) API 密钥，用于 LLM 推理 | (未设置) |
 | JINA_API_KEY | [Jina](https://jina.ai/) API 密钥，用于嵌入 | (未设置) |
 | FIREWORKS_API_KEY | [Fireworks](https://fireworks.ai/) API 密钥，用于嵌入 | (未设置) |
 | SERPER_API_KEY | [Serper](https://serper.dev/) API 密钥，用于在线搜索 | (未设置) |
+| MARKER_API_KEY | [Marker](https://www.datalab.to/) API 密钥，用于 PDF 解析 | (未设置) |
 
 ### 中间件
 

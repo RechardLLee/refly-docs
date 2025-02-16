@@ -6,7 +6,7 @@ To self-deploy Refly, you need to have the following installed:
 
 - Docker
 - Docker Compose
-- Optional: PostgreSQL client (either `psql` or GUI-based tools), used for managing usable LLM models
+- *Optional*: PostgreSQL client (either `psql` or GUI-based tools), used for managing usable LLM models
 
 ::: info
 We plan to provide a fully-functional native application in the future, offering seamless installation experience in a privacy-focused manner. Stay tuned!
@@ -14,7 +14,7 @@ We plan to provide a fully-functional native application in the future, offering
 
 ## Steps {#steps}
 
-1. Clone the repository
+### 1. Clone the repository {#clone-the-repository}
 
 ```bash
 git clone https://github.com/refly-ai/refly.git
@@ -24,18 +24,19 @@ git clone https://github.com/refly-ai/refly.git
 If you only need to deploy with Docker, you can add `--depth 1` to the `clone` command to save disk space and download time.
 :::
 
-2. Prepare the environment
+### 2. Prepare the configuration via `.env` file {#prepare-the-configuration-via-env-file}
 
 ```bash
 cd refly/deploy/docker
 cp .env.example .env
 ```
 
-Notes on environment variables:
+Notes on must-set environment variables:
 
 - **Envs for LLM inference**:
-  - `OPENAI_API_KEY`: Your OpenAI API key
-  - `OPENROUTER_API_KEY`: Your OpenRouter API key (This will override offical OpenAI endpoint if provided)
+  - `OPENAI_API_KEY`: API key for OpenAI (or any other compatible provider)
+  - `OPENAI_BASE_URL`: Base URL for other OpenAI compatible provider
+  - `OPENROUTER_API_KEY`: [OpenRouter](https://openrouter.ai/) API key (This will override `OPENAI_BASE_URL` with OpenRouter's if provided)
 - **Envs for Embeddings**:
   - `EMBEDDINGS_PROVIDER`: Embeddings provider, currently support `openai`, `jina` and `fireworks`
   - `EMBEDDINGS_MODEL_NAME`: The name of the embeddings model, which could be different for different providers
@@ -43,21 +44,15 @@ Notes on environment variables:
   - `JINA_API_KEY`: Required if `EMBEDDINGS_PROVIDER` is `jina`
   - `FIREWORKS_API_KEY`: Required if `EMBEDDINGS_PROVIDER` is `fireworks`
 - **Envs for Web Search**:
-  - `SERPER_API_KEY`: Serper API key
+  - `SERPER_API_KEY`: [Serper](https://serper.dev/) API key
+- **Envs for PDF Parsing**:
+  - `MARKER_API_KEY`: [Marker](https://www.datalab.to/) API key
 
 ::: tip
 A comprehensive list of all the configuration options is available in the [Configuration](./configuration.md).
 :::
 
-::: warning
-Currently, the application will be provisioned with OpenRouter-compatible model names, as you can see. If `OPENROUTER_API_KEY` is not provided, the application will use the official OpenAI endpoint, and you need to make adjustments to the model configuration:
-
-```sql
-UPDATE refly.model_info SET name = TRIM(LEADING 'openai/' FROM name) WHERE provider = 'openai';
-```
-:::
-
-3. Start the docker compose file
+### 3. Start the application via docker compose {#start-the-application-via-docker-compose}
 
 ```bash
 docker compose up -d
@@ -77,6 +72,44 @@ e7b398dbd02b   postgres:16-alpine                         "docker-entrypoint.sâ€
 ```
 
 Finally, you can access the Refly application in `http://localhost:5700`.
+
+### 4. Initialize LLM models {#initialize-llm-models}
+
+You can configure the LLM models in the `refly.model_infos` table within the `refly_db` PostgreSQL database.
+
+```sql
+INSERT INTO "refly"."model_infos"
+("name", "label", "provider", "tier", "created_at", "enabled", "updated_at", "context_limit", "max_output", "capabilities")
+VALUES
+('o3-mini', 'o3 mini', 'openai', 't2', now(), 't', now(), 128000, 16384, '{"vision":true}'),
+('gpt-4o', 'GPT-4o', 'openai', 't2', now(), 't', now(), 128000, 16384, '{"vision":true}'),
+('gpt-4o-mini', 'GPT-4o Mini', 'openai', 't2', now(), 't', now(), 128000, 16384, '{"vision":true}');
+```
+
+Here is a list of explanations for the columns:
+
+- `name`: The name (ID) of the model, which should be the `id` value returned from `${OPENAI_BASE_URL}/v1/models`
+- `label`: The label of the model, which will be displayed in the model selector
+- `provider`: The provider of the model, used to display model icon (currently support `openai`, `anthropic`, `deepseek`, `google`, `qwen`, `mistral` and `meta-llama`)
+- `tier`: The tier of the model, currently support `t1` (premium), `t2` (standard) and `free`
+- `enabled`: Whether the model is enabled
+- `context_limit`: The context limit of the model (number of tokens)
+- `max_output`: The max output length of the model (number of tokens)
+- `capabilities`: The capabilities of the model (JSON string), with the following keys:
+  - `vision`: Whether the model supports vision (taking images as input)
+
+::: tip
+If you don't have any PostgreSQL client installed, you can use the `docker exec` command to execute the SQL above:
+
+```bash
+docker exec -i refly_db psql 'postgresql://refly:test@localhost:5432/refly' << EOF                    
+INSERT INTO "refly"."model_infos"
+("name", "label", "provider", "tier", "created_at", "enabled", "updated_at", "context_limit", "max_output", "capabilities")
+VALUES
+('openai/gpt-4o-mini', 'GPT-4o Mini', 'openai', 't2', now(), 't', now(), 128000, 16384, '{"vision":true}');
+EOF
+```
+:::
 
 ## Troubleshooting {#troubleshooting}
 

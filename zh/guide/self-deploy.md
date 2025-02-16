@@ -6,7 +6,7 @@
 
 - Docker
 - Docker Compose
-- 可选：PostgreSQL 客户端（可以是 `psql` 或基于 GUI 的工具），用于管理可用的 LLM 模型
+- *可选*: PostgreSQL 客户端（可以是 `psql` 或基于 GUI 的工具），用于管理可用的 LLM 模型
 
 ::: info
 我们计划在未来提供功能完善的原生应用程序，以隐私为重点提供无缝的安装体验。敬请期待！
@@ -14,7 +14,7 @@
 
 ## 部署步骤 {#steps}
 
-1. 克隆代码仓库
+### 1. 克隆代码仓库 {#clone-the-repository}
 
 ```bash
 git clone https://github.com/refly-ai/refly.git
@@ -24,7 +24,7 @@ git clone https://github.com/refly-ai/refly.git
 如果您只需要使用 Docker 部署，可以在 `clone` 命令中添加 `--depth 1` 参数来节省磁盘空间和下载时间。
 :::
 
-2. 准备环境配置
+### 2. 准备环境配置 {#prepare-the-environment-configuration}
 
 ```bash
 cd refly/deploy/docker
@@ -43,7 +43,9 @@ cp .env.example .env
   - `JINA_API_KEY`：如果 `EMBEDDINGS_PROVIDER` 为 `jina` 则必需
   - `FIREWORKS_API_KEY`：如果 `EMBEDDINGS_PROVIDER` 为 `fireworks` 则必需
 - **网络搜索相关环境变量**：
-  - `SERPER_API_KEY`：Serper API 密钥
+  - `SERPER_API_KEY`：[Serper](https://serper.dev/) API 密钥
+- **PDF 解析相关环境变量**：
+  - `MARKER_API_KEY`：[Marker](https://marker.com/) API 密钥
 
 ::: tip
 所有配置选项的完整列表可以在[配置指南](./configuration.md)中找到。
@@ -57,7 +59,7 @@ UPDATE refly.model_info SET name = TRIM(LEADING 'openai/' FROM name) WHERE provi
 ```
 :::
 
-3. 启动 docker compose
+### 3. 通过 docker compose 启动应用 {#start-the-application-via-docker-compose}
 
 ```bash
 docker compose up -d
@@ -77,6 +79,44 @@ e7b398dbd02b   postgres:16-alpine                         "docker-entrypoint.s�
 ```
 
 最后，您可以通过访问 `http://localhost:5700` 来使用 Refly 应用程序。
+
+### 4. 初始化 LLM 模型 {#initialize-the-llm-models}
+
+您可以在 `refly_db` PostgreSQL 数据库中的 `refly.model_infos` 表中配置 LLM 模型。
+
+```sql
+INSERT INTO "refly"."model_infos"
+("name", "label", "provider", "tier", "created_at", "enabled", "updated_at", "context_limit", "max_output", "capabilities")
+VALUES
+('o3-mini', 'o3 mini', 'openai', 't1', now(), 't', now(), 200000, 100000, '{}'),
+('gpt-4o', 'GPT-4o', 'openai', 't1', now(), 't', now(), 128000, 16384, '{"vision":true}'),
+('gpt-4o-mini', 'GPT-4o Mini', 'openai', 't2', now(), 't', now(), 128000, 16384, '{"vision":true}');
+```
+
+以下是各列的说明：
+
+- `name`：模型的名称（ID），应为 `${OPENAI_BASE_URL}/v1/models` 返回的 `id` 值
+- `label`：模型的标签，将在模型选择器中显示
+- `provider`：模型的提供商，用于显示模型图标（目前支持 `openai`、`anthropic`、`deepseek`、`google`、`qwen`、`mistral` 和 `meta-llama`）
+- `tier`：模型的等级，目前支持 `t1`（高级）、`t2`（标准）和 `free`
+- `enabled`：是否启用模型
+- `context_limit`：模型的上下文限制（token 数量）
+- `max_output`：模型的最大输出长度（token 数量）
+- `capabilities`：模型的能力（JSON 字符串），具有以下键：
+  - `vision`：是否支持视觉输入（接受图片作为输入）
+
+::: tip
+如果您未安装 PostgreSQL 客户端，可以使用 `docker exec` 命令执行上述 SQL：
+
+```bash
+docker exec -i refly_db psql 'postgresql://refly:test@localhost:5432/refly' << EOF
+INSERT INTO "refly"."model_infos"
+("name", "label", "provider", "tier", "created_at", "enabled", "updated_at", "context_limit", "max_output", "capabilities")
+VALUES
+('openai/gpt-4o-mini', 'GPT-4o Mini', 'openai', 't2', now(), 't', now(), 128000, 16384, '{"vision":true}');
+EOF
+```
+:::
 
 ## 故障排除 {#troubleshooting}
 
