@@ -28,7 +28,7 @@ If you only need to deploy with Docker, you can add `--depth 1` to the `clone` c
 
 ```bash
 cd refly/deploy/docker
-cp .env.example .env
+cp ../../apps/api/.env.example .env
 ```
 
 Notes on must-set environment variables:

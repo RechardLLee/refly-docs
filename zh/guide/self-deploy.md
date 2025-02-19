@@ -28,13 +28,14 @@ git clone https://github.com/refly-ai/refly.git
 
 ```bash
 cd refly/deploy/docker
-cp .env.example .env
+cp ../../apps/api/.env.example .env
 ```
 
 环境变量说明：
 
 - **LLM 推理相关环境变量**：
   - `OPENAI_API_KEY`：您的 OpenAI API 密钥
+  - `OPENAI_BASE_URL`: 其他 OpenAI 兼容提供商的根 URL
   - `OPENROUTER_API_KEY`：您的 OpenRouter API 密钥（如果提供，将覆盖官方 OpenAI 端点）
 - **向量嵌入相关环境变量**：
   - `EMBEDDINGS_PROVIDER`：向量嵌入提供商，目前支持 `openai`、`jina` 和 `fireworks`
