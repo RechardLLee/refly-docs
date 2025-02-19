@@ -1,6 +1,6 @@
 # Configuration
 
-## API Server
+## API Server {#api-server}
 
 The following are the detailed configurations for the API server. You can inject these environment variables into the `refly_api` container.
 
@@ -221,7 +221,7 @@ Currently, only Jina rerankers are supported. You need to set the `JINA_API_KEY`
 | QUOTA_STORAGE_OBJECT | Object storage quota | `-1` |
 | QUOTA_STORAGE_VECTOR | Vector storage quota | `-1` |
 
-## Web Frontend
+## Web Frontend {#web-frontend}
 
 The following are the detailed configurations for the web frontend. You can inject these environment variables into the `refly_web` container.
 
@@ -231,3 +231,19 @@ The following are the detailed configurations for the web frontend. You can inje
 | --- | --- | --- |
 | REFLY_API_URL | Refly API server URL | `http://localhost:5800` |
 | COLLAB_URL | Collaboration endpoint URL | `http://localhost:5801` |
+
+## Model Configuration {#model-configuration}
+
+LLMs are configured via the `refly.model_infos` table within the `refly_db` PostgreSQL database. You can adjust the models as needed via the SQL client.
+
+Here is a list of explanations for the columns:
+
+- `name`: The name (ID) of the model, which should be the `id` value returned from `${OPENAI_BASE_URL}/v1/models`
+- `label`: The label of the model, which will be displayed in the model selector
+- `provider`: The provider of the model, used to display model icon (currently support `openai`, `anthropic`, `deepseek`, `google`, `qwen`, `mistral` and `meta-llama`)
+- `tier`: The tier of the model, currently support `t1` (premium), `t2` (standard) and `free`
+- `enabled`: Whether the model is enabled
+- `context_limit`: The context limit of the model (number of tokens)
+- `max_output`: The max output length of the model (number of tokens)
+- `capabilities`: The capabilities of the model (JSON string), with the following keys:
+  - `vision`: Whether the model supports vision (taking images as input)

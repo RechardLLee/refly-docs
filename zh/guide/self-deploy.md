@@ -28,13 +28,14 @@ git clone https://github.com/refly-ai/refly.git
 
 ```bash
 cd refly/deploy/docker
-cp .env.example .env
+cp ../../apps/api/.env.example .env
 ```
 
 环境变量说明：
 
 - **LLM 推理相关环境变量**：
   - `OPENAI_API_KEY`：您的 OpenAI API 密钥
+  - `OPENAI_BASE_URL`: 其他 OpenAI 兼容提供商的根 URL
   - `OPENROUTER_API_KEY`：您的 OpenRouter API 密钥（如果提供，将覆盖官方 OpenAI 端点）
 - **向量嵌入相关环境变量**：
   - `EMBEDDINGS_PROVIDER`：向量嵌入提供商，目前支持 `openai`、`jina` 和 `fireworks`
@@ -78,45 +79,58 @@ a13f349fe35b   minio/minio:RELEASE.2025-01-20T14-49-07Z   "/usr/bin/docker-ent�
 e7b398dbd02b   postgres:16-alpine                         "docker-entrypoint.s…"   5 hours ago   Up 5 hours (healthy)   0.0.0.0:5432->5432/tcp, :::5432->5432/tcp                                              refly_db
 ```
 
-最后，您可以通过访问 `http://localhost:5700` 来使用 Refly 应用程序。
+最后，您可以通过访问 `http://${HOST_IP}:5700` 来使用 Refly 应用程序，其中 `${HOST_IP}` 是主机的 IP 地址。
 
-### 4. 初始化 LLM 模型 {#initialize-the-llm-models}
+### 4. 初始化模型 {#initialize-models}
 
-您可以在 `refly_db` PostgreSQL 数据库中的 `refly.model_infos` 表中配置 LLM 模型。
+模型配置通过 `refly_db` PostgreSQL 数据库中的 `refly.model_infos` 表进行管理。我们为一些常见的提供商准备了推荐的模型 SQL 文件：
 
-```sql
-INSERT INTO "refly"."model_infos"
-("name", "label", "provider", "tier", "created_at", "enabled", "updated_at", "context_limit", "max_output", "capabilities")
-VALUES
-('o3-mini', 'o3 mini', 'openai', 't1', now(), 't', now(), 200000, 100000, '{}'),
-('gpt-4o', 'GPT-4o', 'openai', 't1', now(), 't', now(), 128000, 16384, '{"vision":true}'),
-('gpt-4o-mini', 'GPT-4o Mini', 'openai', 't2', now(), 't', now(), 128000, 16384, '{"vision":true}');
-```
+| 提供商 | `OPENAI_BASE_URL` | SQL 文件
+| -------- | ----------------- | -------- |
+| [OpenAI](https://platform.openai.com/) | `https://api.openai.com` | [openai.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/openai.sql) |
+| [OpenRouter](https://openrouter.ai/) | `https://openrouter.ai/api/v1` | [openrouter.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/openrouter.sql) |
+| [DeepSeek](https://platform.deepseek.com/) | `https://api.deepseek.com` | [deepseek.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/deepseek.sql) |
 
-以下是各列的说明：
-
-- `name`：模型的名称（ID），应为 `${OPENAI_BASE_URL}/v1/models` 返回的 `id` 值
-- `label`：模型的标签，将在模型选择器中显示
-- `provider`：模型的提供商，用于显示模型图标（目前支持 `openai`、`anthropic`、`deepseek`、`google`、`qwen`、`mistral` 和 `meta-llama`）
-- `tier`：模型的等级，目前支持 `t1`（高级）、`t2`（标准）和 `free`
-- `enabled`：是否启用模型
-- `context_limit`：模型的上下文限制（token 数量）
-- `max_output`：模型的最大输出长度（token 数量）
-- `capabilities`：模型的能力（JSON 字符串），具有以下键：
-  - `vision`：是否支持视觉输入（接受图片作为输入）
-
-::: tip
-如果您未安装 PostgreSQL 客户端，可以使用 `docker exec` 命令执行上述 SQL：
+选择一个提供商并执行其 SQL 文件：
 
 ```bash
-docker exec -i refly_db psql 'postgresql://refly:test@localhost:5432/refly' << EOF
-INSERT INTO "refly"."model_infos"
-("name", "label", "provider", "tier", "created_at", "enabled", "updated_at", "context_limit", "max_output", "capabilities")
-VALUES
-('openai/gpt-4o-mini', 'GPT-4o Mini', 'openai', 't2', now(), 't', now(), 128000, 16384, '{"vision":true}');
-EOF
+# 初始化推荐的 OpenAI 模型
+curl https://raw.githubusercontent.com/refly-ai/refly/main/deploy/model-providers/openai.sql | docker exec -i refly_db psql -U refly -d refly
+```
+
+```bash
+# 或者，初始化推荐的 OpenRouter 模型
+curl https://raw.githubusercontent.com/refly-ai/refly/main/deploy/model-providers/openrouter.sql | docker exec -i refly_db psql -U refly -d refly
+```
+
+```bash
+# 或者，初始化推荐的 DeepSeek 模型
+curl https://raw.githubusercontent.com/refly-ai/refly/main/deploy/model-providers/deepseek.sql | docker exec -i refly_db psql -U refly -d refly
+```
+
+::: warning
+Refly 目前仅支持一个模型提供商。如果决定切换到另一个提供商或遇到错误 `duplicate key value violates unique constraint "model_infos_name_key"`，您需要先清空 `refly.model_infos` 表：
+
+```bash
+docker exec -it refly_db psql -U refly -d refly -c "TRUNCATE TABLE refly.model_infos;"
 ```
 :::
+
+::: info
+有关模型配置的详细说明，请参阅[配置指南](./configuration.md#model-configuration)。
+:::
+
+## 升级指南 {#upgrade-guide}
+
+要升级到最新稳定版本，您可以拉取最新镜像并重启容器：
+
+```bash
+docker compose pull
+docker compose down
+docker compose up -d --remove-orphans
+```
+
+如果遇到任何问题，请参阅[故障排除](#troubleshooting)部分。
 
 ## 故障排除 {#troubleshooting}
 
@@ -124,7 +138,7 @@ EOF
 
 1. 运行 `docker ps` 来识别不健康的容器。
 2. 运行 `docker logs <container_id>` 来获取更多错误信息。
-3. 如果不健康的容器是 `refly_api`，您可以运行 `docker restart refly_api` 来重启容器。
+3. 如果不健康的容器是 `refly_api`，您可以首先尝试运行 `docker restart refly_api` 来重启容器。
 4. 对于其他容器，您可以在容器日志中搜索错误消息的原因。
 
 如果问题仍然存在，您可以在我们的 [GitHub 仓库](https://github.com/refly-ai/refly/issues)提出问题，或在我们的 [Discord 服务器](https://discord.gg/bWjffrb89h)中联系我们。 

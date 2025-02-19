@@ -231,3 +231,19 @@ Refly 需要两个 MinIO 实例：
 | --- | --- | --- |
 | REFLY_API_URL | Refly API 服务器 URL | `http://localhost:5800` |
 | COLLAB_URL | 协作端点 URL | `http://localhost:5801` | 
+
+## 模型配置
+
+大语言模型（LLM）配置通过 `refly_db` PostgreSQL 数据库中的 `refly.model_infos` 表进行管理。你可以通过 SQL 客户端按需调整模型。
+
+以下是各列的说明：
+
+- `name`：模型的名称（ID），应为 `${OPENAI_BASE_URL}/v1/models` 返回的 `id` 值
+- `label`：模型的标签，将在模型选择器中显示
+- `provider`：模型的提供商，用于显示模型图标（目前支持 `openai`、`anthropic`、`deepseek`、`google`、`qwen`、`mistral` 和 `meta-llama`）
+- `tier`：模型的等级，目前支持 `t1`（高级）、`t2`（标准）和 `free`
+- `enabled`：是否启用模型
+- `context_limit`：模型的上下文限制（token 数量）
+- `max_output`：模型的最大输出长度（token 数量）
+- `capabilities`：模型的能力（JSON 字符串），具有以下键：
+  - `vision`：是否支持视觉输入（接受图片作为输入）
