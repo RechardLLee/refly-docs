@@ -37,7 +37,7 @@ const sidebar = {
     {
       text: "Guide",
       items: [
-        { text: "Getting Started", link: "/guide/getting-started" },
+        { text: "Crash Course", link: "/guide/crash-course" },
         { text: "Self-Deploy", link: "/guide/self-deploy" },
         { text: "Configuration", link: "/guide/configuration" },
         { text: "Chrome Extension", link: "/guide/chrome-extension" },
@@ -76,7 +76,7 @@ const sidebar = {
     {
       text: "指南",
       items: [
-        { text: "快速开始", link: "/zh/guide/getting-started" },
+        { text: "快速上手", link: "/zh/guide/crash-course" },
         { text: "自主部署", link: "/zh/guide/self-deploy" },
         { text: "配置", link: "/zh/guide/configuration" },
         { text: "Chrome 插件", link: "/zh/guide/chrome-extension" },

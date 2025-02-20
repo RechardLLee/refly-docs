@@ -1,26 +1,20 @@
-# Getting Started
+# Crash Course
 
-## How to Register/Login?
+Let's understand how Refly works at its core through a user story, such as creating an article about the newly released "OpenAI Sora".
 
-Visit https://refly.ai/, click "Get Started" and authorize login with Google or Github.
+## Register/Login
 
-## System Requirements
+First, visit https://refly.ai/, and complete account registration or login by logging in and authorizing via email, Google, or GitHub.
 
-Refly is a browser-based online product that can be opened in any operating system using Google/Chrome browser, and other browsers such as Microsoft Edge, Firefox, or Arc browser are also supported.
+## Organizing Creative Ideas with Free Canvas
 
-## Basic Feature Guide
+After entering the Refly app, you can generate various questions about Sora-related technologies on Refly's **free canvas**, then understand the implementation principles of each part. Once you have a basic understanding of Sora's technology and product, you can continue to ask follow-up questions based on certain node topics, dive deeper, and understand more advanced concepts step by step.
 
-Let's understand Refly's core usage process through a user story, such as creating an article about the newly released "OpenAI Sora".
-
-### Organizing Creative Ideas with Free Canvas
-
-First, you can generate various questions about Sora-related technologies on Refly's **free canvas**, then understand the implementation principles of each part. Once you have a basic understanding of Sora's technology and product, you can continue to ask follow-up questions based on certain node topics, dive deeper, and understand more advanced concepts step by step.
-
-What's more amazing is that each step represents your free-flowing questioning and thinking process, and these processes don't interfere with each other unless you manually ask questions based on a certain node or add it to the context (**"Add to Context/Follow-up" floating on each node**). This provides you with **the ability to ask in-depth questions based on a specific topic or think freely based on multiple topics** - very flexible!
+What's more amazing is that each step represents your free-flowing questioning and thinking process, and these processes don't interfere with each other unless you manually ask questions based on a certain node or add it to the context (**"Add to Context/Follow-up" floating on each node**). This provides you with **the ability to ask in-depth questions based on a specific topic or think freely based on multiple topics**, which is very flexible!
 
 ![generate-outline](/images/generate-outline.png)
 
-### Using Built-in AI Search or Uploading Writing Materials
+## Using Built-in AI Search or Uploading Writing Materials
 
 Once you have a general understanding of Sora's principles and derived technologies, you can start preparing your creation materials! Click the floating button on the left side of Refly, select the second button "Add Resource", and you can add interesting materials to the free canvas through **online search**, copying webpage links, or plain text for later research.
 
@@ -28,7 +22,7 @@ Each added material is automatically processed with AI semantics, allowing you t
 
 ![explore](/images/explore.png)
 
-### Multi-threaded Conversations for Creative Research
+## Multi-threaded Conversations for Creative Research
 
 After importing your writing materials, you can ask AI questions based on the materials, such as **summarizing, translating, or generating tables for certain materials**. Use the first button "Selection Mode" on the left of the canvas or the "Add to Context/Follow-up" button floating on each node to **select multiple materials** for summarization, translation, or ask any questions you want!
 
@@ -36,7 +30,7 @@ Of course, throughout the research process, Refly also provides many useful skil
 
 ![research](/images/research.png)
 
-### Using AI Editor for Writing
+## Using AI Editor for Writing
 
 Finally, we come to the most exciting part! You can quickly generate a document using the "Generate Document" skill or create a new document using the "New Document" in the sidebar. Most usefully, during the document generation process, you can select any materials from the canvas (just click the "Add to Context/Follow-up" button floating on each node), combine materials with questions to generate documents, making your document content specifically tailored to your writing goals!
 
@@ -52,7 +46,7 @@ That's it! Through the steps above, you've mastered the secret to using Refly AI
 
 ### Issue Reporting
 
-Currently, Refly is fully open and in its early access phase, so you might encounter some usability issues, but we'll fix them right away! If you encounter any errors or other issues, you can copy the troubleshooting code and throw it in our face immediately! We'll follow up with fixes right away! For example, the error below. TraceID is the error code!
+Currently, Refly is fully open and in its early access phase, so you might encounter some usability issues, but we'll fix them right away! If you encounter any errors or other issues, you can copy the troubleshooting code and throw it in our face immediately! We'll follow up with fixes right away! For example, the error below, and traceID is the error code.
 
 ![error-report](/images/error-report.png)
 
