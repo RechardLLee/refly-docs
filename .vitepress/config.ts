@@ -31,6 +31,10 @@ const zhNav = [
 const sidebar = {
   en: [
     {
+      text: "Getting Started",
+      items: [{ text: "Welcome to Refly", link: "/" }],
+    },
+    {
       text: "Guide",
       items: [
         { text: "Getting Started", link: "/guide/getting-started" },
@@ -65,6 +69,10 @@ const sidebar = {
     },
   ],
   zh: [
+    {
+      text: "入门",
+      items: [{ text: "欢迎使用 Refly", link: "/zh" }],
+    },
     {
       text: "指南",
       items: [

@@ -1,97 +1,14 @@
-![product](/images/product.png)
-
 # Getting Started
 
-### What is Refly
-
-Refly is an AI-native content creation platform built on the concept of "**Free Canvas**". Through multi-threaded conversations, knowledge base integration, context memory, intelligent search, and a WYSIWYG AI document editor, **it provides a one-stop solution from creative ideation to finished content:**
-
-1. Multi-topic & multi-threaded conversation functionality on a free canvas, allowing you to freely brainstorm and organize creative thoughts with AI assistance
-2. Integration of writing materials and AI knowledge base to build a powerful second brain system
-3. Context memory functionality similar to Cursor and NotebookLM for precise modifications
-4. Built-in Perplexity-style AI web search and knowledge base retrieval to break through information bottlenecks
-5. Integration of Notion-style AI editor and ChatGPT Canvas-like document processing experience for seamless creation
-
-### 1-Minute Quick Overview Video
-
-<div style="padding: 20px 0;">
-<iframe width="100%" height="415" style="border-radius: 10px;" src="https://www.youtube.com/embed/MWgWy_LBtko" title="Refly Quick Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-## 1. Product Introduction
-
-### What is Refly
-
-Refly is an AI-native content creation platform built on the concept of "**Free Canvas**". Through multi-threaded conversations, knowledge base integration, context memory, intelligent search, and a WYSIWYG AI document editor, **it provides a one-stop solution from creative ideation to finished content:**
-
-1. Multi-topic & multi-threaded conversation functionality on a free canvas, allowing you to freely brainstorm and organize creative thoughts with AI assistance
-2. Integration of writing materials and AI knowledge base to build a powerful second brain system
-3. Context memory functionality similar to Cursor and NotebookLM for precise modifications
-4. Built-in Perplexity-style AI web search and knowledge base retrieval to break through information bottlenecks
-5. Integration of Notion-style AI editor and ChatGPT Canvas-like document processing experience for seamless creation
-
-### Core Features and Value
-
-Refly aims to "**Let creators focus on thinking while AI assists with efficient creation**".
-
-Therefore, we have implemented 4 core capabilities:
-
-1. **Smart Canvas | Visualize Your Thinking**
-   1. Free canvas helps you clarify thoughts and easily organize ideas
-   2. Covers 10+ scenarios including academic research, legal document research, investment analysis, and technical documentation
-   3. AI intelligently analyzes topics and automatically generates research frameworks
-   4. Personal knowledge base integration stimulates deep thought connections
-
-![feature-1](/images/feature1.png)
-
-2. **Knowledge Management | Organize Information Better**
-   1. One-click import of papers, web pages, and various professional materials
-   2. AI intelligent search for quick location of core reference content
-   3. Automatic knowledge point correlation to inspire cross-domain innovation
-   4. Seamless integration with existing knowledge systems
-
-![feature-2](/images/feature2.png)
-
-3. **Multi-threaded Conversations | More Efficient Creation**
-   1. Canvas-style dialogue exploration for deep topic research
-   2. Intelligent context management for more focused conversations
-   3. Access knowledge base anytime to break through research bottlenecks
-   4. Support real-time collaboration for collective wisdom
-
-![feature-3](/images/feature3.png)
-
-4. **Professional Creation | More Professional Output**
-   1. Personalized writing environment for flexible creative scenarios
-   2. Professional writing tools to support academic and technical content
-   3. AI editing assistant to control content quality
-   4. Structured output to ensure professional expression
-
-![feature-4](/images/feature4.png)
-
-### Use Cases and User Groups
-
-Whether you're a student writing papers, an office worker with a side business, or a content creator managing social media, you'll find suitable use cases.
-
-|                                           | Scenarios                                                                  | Effects                                                                               | Benefits                                                       |
-| ----------------------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
-| **Content Creators**                      | Writing articles, social media posts, public accounts, short video scripts | Generate eye-catching titles and content frameworks in 30 minutes, inspire creativity | Eliminate content drought, improve creation efficiency         |
-| **Knowledge Workers**                     | Year-end summaries, work reports, project proposals                        | Quickly organize key points, generate professional expressions                        | Save 50% writing time, improve document quality                |
-| **Academic/Legal/Investment Researchers** | Thesis writing, literature reviews, research plans                         | Intelligent literature analysis, extract core viewpoints                              | Greatly improve research efficiency, ensure academic standards |
-| **Business Managers**                     | Strategic planning, job reports, meeting minutes                           | Quickly integrate information, form decision basis                                    | Improve management efficiency, optimize decision quality       |
-| **Freelancers**                           | Writing orders, proposal planning, business copywriting                    | One-click generation of multi-style content                                           | Increase order efficiency, ensure delivery quality             |
-| **Small Teams**                           | Product documentation, training materials, team collaboration              | Unify document standards, share knowledge assets                                      | Reduce communication costs, improve team efficiency            |
-
-## 2. Getting Started
-
-### How to Register/Login?
+## How to Register/Login?
 
 Visit https://refly.ai/, click "Get Started" and authorize login with Google or Github.
 
-### System Requirements
+## System Requirements
 
 Refly is a browser-based online product that can be opened in any operating system using Google/Chrome browser, and other browsers such as Microsoft Edge, Firefox, or Arc browser are also supported.
 
-## 3. Basic Feature Guide
+## Basic Feature Guide
 
 Let's understand Refly's core usage process through a user story, such as creating an article about the newly released "OpenAI Sora".
 
@@ -131,7 +48,7 @@ At this point, you might ask, if each step is generated by AI, won't the overall
 
 That's it! Through the steps above, you've mastered the secret to using Refly AI to help you efficiently complete the journey from creative ideas to high-quality content! Now it's time for you to explore freely ~ Good luck 🍀
 
-## 5. FAQ
+## FAQ
 
 ### Issue Reporting
 
@@ -145,6 +62,6 @@ Currently, Refly is fully open and in its early access phase, so you might encou
 
 This situation occurs because Refly's overall login authorization system has changed. Users who previously participated in the beta test and were already logged in will encounter this - just click "Get Started" to log in normally.
 
-## 6. Get Help & Join Feedback Group
+## Get Help & Join Feedback Group
 
 You can visit the [Contact Us](/community/contact-us.md) link to join our community, and we'll answer your questions ASAP.
