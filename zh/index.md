@@ -149,14 +149,14 @@ Refly 是一个基于浏览器的在线产品，任何操作系统使用谷歌/C
 
 关注 Refly.AI 公众号，查收最新特性 👇
 
-![wechat-group](/zh/images/wechat-group-qrcode.png)
+![wechat-group](/images/wechat-group-qrcode.png)
 
 可以访问「[联系我们](/zh/community/contact-us.md)」链接，加入我们内测反馈交流群，我们将第一时间为您答疑解惑！
 
 飞书 👇：
 
-![feishu](/zh/images/lark-qrcode.png)
+![feishu](/images/lark-qrcode.png)
 
 微信群 👇：
 
-![wechat](/zh/images/wechat-qrcode.png)
+![wechat](/images/wechat-qrcode.png)

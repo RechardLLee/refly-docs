@@ -147,10 +147,4 @@ This situation occurs because Refly's overall login authorization system has cha
 
 ## 6. Get Help & Join Feedback Group
 
-Join the Feishu group:
-
-Follow Refly.AI Official Account for the latest features 👇
-
-Discord 👉 [https://discord.com/invite/bWjffrb89h](https://discord.com/invite/bWjffrb89h)
-
-You can visit the "[Contact Us](/community/contact-us.md)" link to join our beta feedback discussion group, and we'll answer your questions right away!
+You can visit the [Contact Us](/community/contact-us.md) link to join our community, and we'll answer your questions ASAP.

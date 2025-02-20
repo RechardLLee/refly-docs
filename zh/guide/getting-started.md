@@ -133,7 +133,7 @@ Refly 是一个基于浏览器的在线产品，任何操作系统使用谷歌/C
 
 ### 问题反馈
 
-目前 Refly 已经全面开放并进入早期开放使用阶段，可能遇到一些可用性问题，不过我们会马上跟进修复！如果您遇到了报错其他问题，可以复制报错的排查码并立即甩在我们的脸上！我们会马上跟进修复！比如下面的报错。TraceID 即为错误码！
+如果您遇到了报错，可以复制报错的排查码并立即甩在我们的脸上，我们会马上跟进修复！比如下面的报错。TraceID 即为错误码：
 
 ![error-report](/images/error-report.png)
 
@@ -145,18 +145,4 @@ Refly 是一个基于浏览器的在线产品，任何操作系统使用谷歌/C
 
 ## 6. 获取帮助 & 加入反馈群
 
-加入飞书群：
-
-关注 Refly.AI 公众号，查收最新特性 👇
-
-![wechat-group](/zh/images/wechat-group-qrcode.png)
-
-可以访问「[联系我们](/zh/community/contact-us.md)」链接，加入我们内测反馈交流群，我们将第一时间为您答疑解惑！
-
-飞书 👇：
-
-![feishu](/zh/images/lark-qrcode.png)
-
-微信群 👇：
-
-![wechat](/zh/images/wechat-qrcode.png)
+访问[联系我们](/zh/community/contact-us.md)，加入我们社群，我们将第一时间为您答疑解惑！
