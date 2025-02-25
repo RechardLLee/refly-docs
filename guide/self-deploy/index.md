@@ -46,7 +46,7 @@ Notes on must-set environment variables:
   - `SERPER_API_KEY`: [Serper](https://serper.dev/) API key
 
 ::: tip
-A comprehensive list of all the configuration options is available in the [Configuration](./configuration.md).
+A comprehensive list of all the configuration options is available in the [Configuration](../configuration.md).
 :::
 
 ### 3. Start the application via docker compose {#start-the-application-via-docker-compose}
@@ -115,7 +115,7 @@ docker exec -it refly_db psql -U refly -d refly -c "TRUNCATE TABLE refly.model_i
 :::
 
 ::: info
-For detailed explanation of model configurations, please refer to the [Configuration](./configuration.md#model-configuration) page.
+For detailed explanation of model configurations, please refer to the [Configuration](../configuration.md#model-configuration) page.
 :::
 
 ## Upgrade Guide {#upgrade-guide}

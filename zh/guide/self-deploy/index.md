@@ -46,7 +46,7 @@ cp ../../apps/api/.env.example .env
   - `SERPER_API_KEY`：[Serper](https://serper.dev/) API 密钥
 
 ::: tip
-所有配置选项的完整列表可以在[配置指南](./configuration.md)中找到。
+所有配置选项的完整列表可以在[配置指南](../configuration.md)中找到。
 :::
 
 ### 3. 通过 docker compose 启动应用 {#start-the-application-via-docker-compose}
@@ -115,7 +115,7 @@ docker exec -it refly_db psql -U refly -d refly -c "TRUNCATE TABLE refly.model_i
 :::
 
 ::: info
-有关模型配置的详细说明，请参阅[配置指南](./configuration.md#model-configuration)。
+有关模型配置的详细说明，请参阅[配置指南](../configuration.md#model-configuration)。
 :::
 
 ## 升级指南 {#upgrade-guide}
