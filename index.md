@@ -1,4 +1,4 @@
-![product](/images/product.png)
+![product](/images/product.webp)
 
 # Welcome to Refly
 
@@ -28,7 +28,7 @@ Therefore, we have implemented 4 core capabilities:
    3. AI intelligently analyzes topics and automatically generates research frameworks
    4. Personal knowledge base integration stimulates deep thought connections
 
-![feature-1](/images/feature1.png)
+![feature-1](/images/feature1.webp)
 
 2. **Knowledge Management | Organize Information Better**
    1. One-click import of papers, web pages, and various professional materials
@@ -36,7 +36,7 @@ Therefore, we have implemented 4 core capabilities:
    3. Automatic knowledge point correlation to inspire cross-domain innovation
    4. Seamless integration with existing knowledge systems
 
-![feature-2](/images/feature2.png)
+![feature-2](/images/feature2.webp)
 
 3. **Multi-threaded Conversations | More Efficient Creation**
    1. Canvas-style dialogue exploration for deep topic research
@@ -44,7 +44,7 @@ Therefore, we have implemented 4 core capabilities:
    3. Access knowledge base anytime to break through research bottlenecks
    4. Support real-time collaboration for collective wisdom
 
-![feature-3](/images/feature3.png)
+![feature-3](/images/feature3.webp)
 
 4. **Professional Creation | More Professional Output**
    1. Personalized writing environment for flexible creative scenarios
@@ -52,7 +52,7 @@ Therefore, we have implemented 4 core capabilities:
    3. AI editing assistant to control content quality
    4. Structured output to ensure professional expression
 
-![feature-4](/images/feature4.png)
+![feature-4](/images/feature4.webp)
 
 ## Use Cases and User Groups
 

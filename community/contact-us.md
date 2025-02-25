@@ -22,7 +22,7 @@ https://github.com/refly-ai/refly/discussions
 
 Scan the QR code to join our WeChat group:
 
-![wechat](/images/wechat-qrcode.png)
+![wechat](/images/wechat-qrcode.webp)
 
 ::: tip Tip
 If the QR code expires, please contact us via email: support@refly.ai
@@ -32,10 +32,10 @@ If the QR code expires, please contact us via email: support@refly.ai
 
 Scan the QR code to follow our WeChat official account:
 
-![wechat](/images/wechat-group-qrcode.png)
+![wechat](/images/wechat-group-qrcode.webp)
 
 ## Lark Group
 
 Scan the QR code to join our Lark group:
 
-![lark](/images/lark-qrcode.png)
+![lark](/images/lark-qrcode.webp)

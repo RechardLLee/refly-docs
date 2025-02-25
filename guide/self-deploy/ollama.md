@@ -10,7 +10,7 @@ We assume that you have followed the [Self Deploy](./index.md) guide to install 
 
 Head over to the [Ollama](https://ollama.com/docs/installation) home page and press the "Download" button.
 
-![Ollama Download](/images/ollama-home.png)
+![Ollama Download](/images/ollama-home.webp)
 
 After downloading and running the installer, you can verify Ollama is working properly by running the following command:
 

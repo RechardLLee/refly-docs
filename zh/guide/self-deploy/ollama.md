@@ -10,7 +10,7 @@
 
 前往 [Ollama](https://ollama.com/docs/installation) 主页并点击"Download"按钮。
 
-![Ollama 下载](/images/ollama-home.png)
+![Ollama 下载](/images/ollama-home.webp)
 
 下载并运行安装程序后，您可以通过运行以下命令来验证 Ollama 是否正常工作：
 
