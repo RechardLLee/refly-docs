@@ -12,7 +12,7 @@
 
 更神奇的是，每一步都代表的你的自由发散提问思考的过程，且这些过程都不会相互影响，除非您手动基于某个节点提问或者添加为上下文（**悬浮在每个节点上面的「添加上下文/追问」**），这为您提供了**基于某个主题深入追问或者基于多个主题自由思考的能力**，非常的自由！
 
-![generate-outline](/images/generate-outline.png)
+![generate-outline](/images/generate-outline.webp)
 
 ## 使用内建 AI 搜索或上传写作素材
 
@@ -20,7 +20,7 @@
 
 每个添加的素材会自动进行 AI 语义处理，使得您可以使用「知识库搜索」技能对所有的资源进行语义搜索提问，简直就像配备一个基于全网内容和自己私域知识的 AI 搜索引擎 Perplexity！
 
-![explore](/images/explore.png)
+![explore](/images/explore.webp)
 
 ## 多线程会话进行创作研究
 
@@ -28,7 +28,7 @@
 
 当然，整个研究的过程中，Refly 还提供了「全网搜索」、「知识库搜索」等诸多好用的技能，可以一键调用，对全网相关的内容或者自己已经保存的所有素材进行**智能语义搜索**，不放过每一个细节！
 
-![research](/images/research.png)
+![research](/images/research.webp)
 
 ## 使用 AI 编辑器写作
 
@@ -38,7 +38,7 @@
 
 当然这个时候你可能会问了，我每一步都是通过 AI 生成，那么整体不是显得很乱吗？别着急！Refly 提供的文档编辑器自带丰富的富文本操作能力，您可以通过提供的富文本工具快速排版，当然，也支持一键选中内容让 AI 给你排版或者编辑，怎么样，非常贴心有木有！😆
 
-![generate-article](/images/generate-article.png)
+![generate-article](/images/generate-article.webp)
 
 好啦！通过上面的步骤，您掌握了使用 Refly AI 帮助您高效完成从想法创意到高质量内容的秘笈！接下来就教给您自由探索啦～ 祝您好运 🍀
 
@@ -48,11 +48,11 @@
 
 如果您遇到了报错，可以复制报错的排查码并立即甩在我们的脸上，我们会马上跟进修复！比如下面的报错。TraceID 即为错误码：
 
-![error-report](/images/error-report.png)
+![error-report](/images/error-report.webp)
 
 ### 打开落地页报错
 
-![landing-page-error](/images/landing-page-error.png)
+![landing-page-error](/images/landing-page-error.webp)
 
 这种情况是因为 Refly 整体的登录授权体系发生了变化，之前参与内测已经登录的同学会遇到，只需要点击「开始使用」正常登录即可。
 

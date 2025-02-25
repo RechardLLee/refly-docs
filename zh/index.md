@@ -1,4 +1,4 @@
-![product](/images/product.png)
+![product](/images/product.webp)
 
 # 欢迎使用 Refly
 
@@ -28,7 +28,7 @@ Refly 旨在 「**让创作者专注思考，AI 助力高效创作**」。
    3. AI 智能分析主题，自动生成研究框架
    4. 个人知识库集成，激发深度思维连接
 
-![feature-1](/images/feature1.png)
+![feature-1](/images/feature1.webp)
 
 2. **知识管理｜让信息更有序**
    1. 一键导入论文、网页等多种专业资料
@@ -36,7 +36,7 @@ Refly 旨在 「**让创作者专注思考，AI 助力高效创作**」。
    3. 自动关联知识点，激发跨领域创新
    4. 与已有知识系统无缝对接
 
-![feature-2](/images/feature2.png)
+![feature-2](/images/feature2.webp)
 
 3. **多线程对话｜让创作更高效**
    1. 画布式对话探索，深入研究主题
@@ -44,7 +44,7 @@ Refly 旨在 「**让创作者专注思考，AI 助力高效创作**」。
    3. 随时调用知识库，突破研究瓶颈
    4. 支持实时协作，集思广益（即将到来...）
 
-![feature-3](/images/feature3.png)
+![feature-3](/images/feature3.webp)
 
 4. **专业创作｜让输出更专业**
    1. 个性化写作环境，自由调节创作场景
@@ -52,7 +52,7 @@ Refly 旨在 「**让创作者专注思考，AI 助力高效创作**」。
    3. AI 编辑助手，把控内容质量
    4. 结构化输出，确保专业表达
 
-![feature-4](/images/feature4.png)
+![feature-4](/images/feature4.webp)
 
 ## 适用场景和用户群体
 

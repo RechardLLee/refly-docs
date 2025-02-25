@@ -12,8 +12,8 @@
 | PORT | HTTP API 服务端口，用于常规 API 请求 | `5800` |
 | WS_PORT | WebSocket 服务器端口，用于画布和文档的实时同步 | `5801` |
 | ORIGIN | 客户端来源（即访问 Refly 应用的地址），用于 CORS 检查 | `http://localhost:5700` |
-| ENDPOINT | API 端点，用于 Refly API 请求 | `http://localhost:5800` |
-| STATIC_ENDPOINT | 静态文件端点，用于提供静态文件服务 | `http://localhost:5800/v1/misc/` |
+| STATIC_PUBLIC_ENDPOINT | 公开可访问的静态文件端点 (无需身份验证即可访问) | `http://localhost:5800/v1/misc` |
+| STATIC_PRIVATE_ENDPOINT | 私有静态文件端点 (需要身份验证才能访问) | `http://localhost:5800/v1/misc` |
 
 ### 凭证配置
 
@@ -156,6 +156,16 @@ Refly 需要两个 MinIO 实例：
 你可以在 [Google Developer](https://developers.google.com/identity/protocols/oauth2) 了解更多关于 Google OAuth 的信息。
 :::
 
+### 解析器配置
+
+| 环境变量 | 说明 | 默认值 |
+| --- | --- | --- |
+| PARSER_PDF | PDF 文件解析器 (可选 `pdfjs` 或 `marker`) | `pdfjs` |
+
+::: info
+如果想使用 `marker` 作为 PDF 文件的解析器，你需要设置 `MARKER_API_KEY` 环境变量。
+:::
+
 ### 嵌入配置
 
 | 环境变量 | 说明 | 默认值 |
@@ -165,7 +175,7 @@ Refly 需要两个 MinIO 实例：
 | EMBEDDINGS_DIMENSIONS | 嵌入向量维度 | `768` |
 | EMBEDDINGS_BATCH_SIZE | 嵌入处理批次大小 | `512` |
 
-::: warning
+::: info
 默认的 `EMBEDDINGS_PROVIDER` 是 `jina`。如果你想使用其他嵌入提供者，请设置相应的环境变量。
 :::
 
@@ -189,7 +199,6 @@ Refly 需要两个 MinIO 实例：
 
 | 环境变量 | 说明 | 默认值 |
 | --- | --- | --- |
-| REFLY_DEFAULT_MODEL | 默认 AI 模型 | `openai/gpt-4o-mini` |
 | SKILL_IDLE_TIMEOUT | 技能空闲超时时间（毫秒） | `60000` |
 | SKILL_EXECUTION_TIMEOUT | 技能执行超时时间（毫秒） | `180000` |
 
@@ -230,7 +239,8 @@ Refly 需要两个 MinIO 实例：
 | 环境变量 | 说明 | 默认值 |
 | --- | --- | --- |
 | REFLY_API_URL | Refly API 服务器 URL | `http://localhost:5800` |
-| COLLAB_URL | 协作端点 URL | `http://localhost:5801` | 
+| COLLAB_URL | 协作端点 URL | `http://localhost:5801` |
+| SUBSCRIPTION_ENABLED | 是否启用订阅和计费功能 | (未设置) |
 
 ## 模型配置
 
@@ -243,6 +253,7 @@ Refly 需要两个 MinIO 实例：
 - `provider`：模型的提供商，用于显示模型图标（目前支持 `openai`、`anthropic`、`deepseek`、`google`、`qwen`、`mistral` 和 `meta-llama`）
 - `tier`：模型的等级，目前支持 `t1`（高级）、`t2`（标准）和 `free`
 - `enabled`：是否启用模型
+- `is_default`：是否为默认模型
 - `context_limit`：模型的上下文限制（token 数量）
 - `max_output`：模型的最大输出长度（token 数量）
 - `capabilities`：模型的能力（JSON 字符串），具有以下键：

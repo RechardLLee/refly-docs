@@ -12,8 +12,8 @@ The following are the detailed configurations for the API server. You can inject
 | PORT | HTTP API service port, used for regular API requests | `5800` |
 | WS_PORT | WebSocket server port, used for real-time synchronization for canvases and documents | `5801` |
 | ORIGIN | Client origin (where you are accessing the Refly application from), used for CORS check | `http://localhost:5700` |
-| ENDPOINT | API endpoint, used for Refly API requests | `http://localhost:5800` |
-| STATIC_ENDPOINT | Static file endpoint, used for serving static files | `http://localhost:5800/v1/misc/` |
+| STATIC_PUBLIC_ENDPOINT | Public static file endpoint (which can be accessed without authentication) | `http://localhost:5800/v1/misc` |
+| STATIC_PRIVATE_ENDPOINT | Private static file endpoint (which must be accessed with authentication) | `http://localhost:5800/v1/misc` |
 
 ### Credentials
 
@@ -156,6 +156,16 @@ The default OAuth credentials are invalid (just a placeholder). Please set your 
 You can learn more about Google OAuth at [Google Developer](https://developers.google.com/identity/protocols/oauth2).
 :::
 
+### Parser Configuration
+
+| Env | Description | Default Value |
+| --- | --- | --- |
+| PARSER_PDF | Parser for PDF files (available options: `pdfjs`, `marker`) | `pdfjs` |
+
+::: info
+If you want to use `marker` as the parser for PDF files, you need to set the `MARKER_API_KEY` environment variable.
+:::
+
 ### Embeddings Configuration
 
 | Env | Description | Default Value |
@@ -165,7 +175,7 @@ You can learn more about Google OAuth at [Google Developer](https://developers.g
 | EMBEDDINGS_DIMENSIONS | Embedding vector dimensions | `768` |
 | EMBEDDINGS_BATCH_SIZE | Batch size for embedding processing | `512` |
 
-::: warning
+::: info
 The default `EMBEDDINGS_PROVIDER` is `jina`. If you want to use other embeddings providers, please set the corresponding environment variables.
 :::
 
@@ -189,7 +199,6 @@ Currently, only Jina rerankers are supported. You need to set the `JINA_API_KEY`
 
 | Env | Description | Default Value |
 | --- | --- | --- |
-| REFLY_DEFAULT_MODEL | Default AI model | `openai/gpt-4o-mini` |
 | SKILL_IDLE_TIMEOUT | Skill idle timeout in milliseconds | `60000` |
 | SKILL_EXECUTION_TIMEOUT | Skill execution timeout in milliseconds | `180000` |
 
@@ -231,6 +240,7 @@ The following are the detailed configurations for the web frontend. You can inje
 | --- | --- | --- |
 | REFLY_API_URL | Refly API server URL | `http://localhost:5800` |
 | COLLAB_URL | Collaboration endpoint URL | `http://localhost:5801` |
+| SUBSCRIPTION_ENABLED | Whether to enable subscription and billing features | (not set) |
 
 ## Model Configuration {#model-configuration}
 
@@ -243,6 +253,7 @@ Here is a list of explanations for the columns:
 - `provider`: The provider of the model, used to display model icon (currently support `openai`, `anthropic`, `deepseek`, `google`, `qwen`, `mistral` and `meta-llama`)
 - `tier`: The tier of the model, currently support `t1` (premium), `t2` (standard) and `free`
 - `enabled`: Whether the model is enabled
+- `is_default`: Whether the model is the default model
 - `context_limit`: The context limit of the model (number of tokens)
 - `max_output`: The max output length of the model (number of tokens)
 - `capabilities`: The capabilities of the model (JSON string), with the following keys:
