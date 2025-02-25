@@ -4,8 +4,7 @@
 
 To self-deploy Refly, you need to have the following installed:
 
-- Docker
-- Docker Compose
+- Docker (version 20.10.0 or higher)
 - *Optional*: PostgreSQL client (either `psql` or GUI-based tools), used for managing usable LLM models
 
 ::: info
@@ -45,8 +44,6 @@ Notes on must-set environment variables:
   - `FIREWORKS_API_KEY`: Required if `EMBEDDINGS_PROVIDER` is `fireworks`
 - **Envs for Web Search**:
   - `SERPER_API_KEY`: [Serper](https://serper.dev/) API key
-- **Envs for PDF Parsing**:
-  - `MARKER_API_KEY`: [Marker](https://www.datalab.to/) API key
 
 ::: tip
 A comprehensive list of all the configuration options is available in the [Configuration](./configuration.md).
@@ -73,6 +70,14 @@ e7b398dbd02b   postgres:16-alpine                         "docker-entrypoint.sâ€
 
 Finally, you can access the Refly application in `http://${HOST_IP}:5700`, where `${HOST_IP}` is the IP address of the host machine.
 
+::: info
+If you cannot access the Refly application, please check the following:
+
+- The `HOST_IP` is correct.
+- The application is running properly. If not, jump to [Troubleshooting](#troubleshooting).
+- The port `5700` is not being blocked by any application firewall. Check this especially if you are using a cloud server.
+:::
+
 ### 4. Initialize models {#initialize-models}
 
 Models are configured via the `refly.model_infos` table within the `refly_db` PostgreSQL database. We have prepared the SQL files for some common providers with recommended models:
@@ -82,6 +87,7 @@ Models are configured via the `refly.model_infos` table within the `refly_db` Po
 | [OpenAI](https://platform.openai.com/) | `https://api.openai.com` | [openai.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/openai.sql) |
 | [OpenRouter](https://openrouter.ai/) | `https://openrouter.ai/api/v1` | [openrouter.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/openrouter.sql) |
 | [DeepSeek](https://platform.deepseek.com/) | `https://api.deepseek.com` | [deepseek.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/deepseek.sql) |
+| [Ollama](https://ollama.com/) | `http://host.docker.internal:11434/v1` | [ollama.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/ollama.sql) |
 
 Choose one of the providers and execute it against the `refly_db` container. For example:
 
@@ -128,8 +134,8 @@ If you run into any issues, please refer to the [Troubleshooting](#troubleshooti
 
 If the application fails to function properly, you can try the following steps:
 
-1. Run `docker ps` to identify unhealthy containers.
-2. Run `docker logs <container_id>` to get more information about the error.
+1. Run `docker ps --filter name=refly_ | grep -v 'healthy'` to identify **unhealthy** containers (whose status is not `healthy`).
+2. Run `docker logs <container_id>` to get more information about the unhealthy container.
 3. If the unhealthy container is `refly_api`, you can first try to run `docker restart refly_api` to restart the container.
 4. For others, you can search for the cause of error messages in the container's logs.
 

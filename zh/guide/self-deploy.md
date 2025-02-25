@@ -1,11 +1,10 @@
-# 自行部署
+# 私有部署
 
 ## 前置要求 {#prerequisites}
 
 要自行部署 Refly，您需要安装以下软件：
 
-- Docker
-- Docker Compose
+- Docker (版本 20.10.0 或更高)
 - *可选*: PostgreSQL 客户端（可以是 `psql` 或基于 GUI 的工具），用于管理可用的 LLM 模型
 
 ::: info
@@ -45,19 +44,9 @@ cp ../../apps/api/.env.example .env
   - `FIREWORKS_API_KEY`：如果 `EMBEDDINGS_PROVIDER` 为 `fireworks` 则必需
 - **网络搜索相关环境变量**：
   - `SERPER_API_KEY`：[Serper](https://serper.dev/) API 密钥
-- **PDF 解析相关环境变量**：
-  - `MARKER_API_KEY`：[Marker](https://marker.com/) API 密钥
 
 ::: tip
 所有配置选项的完整列表可以在[配置指南](./configuration.md)中找到。
-:::
-
-::: warning
-目前，应用程序将使用 OpenRouter 兼容的模型名称进行配置。如果未提供 `OPENROUTER_API_KEY`，应用程序将使用官方 OpenAI 端点，此时您需要对模型配置进行调整：
-
-```sql
-UPDATE refly.model_info SET name = TRIM(LEADING 'openai/' FROM name) WHERE provider = 'openai';
-```
 :::
 
 ### 3. 通过 docker compose 启动应用 {#start-the-application-via-docker-compose}
@@ -81,6 +70,14 @@ e7b398dbd02b   postgres:16-alpine                         "docker-entrypoint.s�
 
 最后，您可以通过访问 `http://${HOST_IP}:5700` 来使用 Refly 应用程序，其中 `${HOST_IP}` 是主机的 IP 地址。
 
+::: info
+如果无法访问 Refly 应用，请检查以下内容：
+
+- `HOST_IP` 是否正确。
+- 应用是否正常运行。如果未运行，请跳转到[故障排除](#troubleshooting)部分。
+- 端口 `5700` 是否被任何应用程序防火墙阻止。如果您使用的是云服务器，请特别注意这一点。
+:::
+
 ### 4. 初始化模型 {#initialize-models}
 
 模型配置通过 `refly_db` PostgreSQL 数据库中的 `refly.model_infos` 表进行管理。我们为一些常见的提供商准备了推荐的模型 SQL 文件：
@@ -90,6 +87,7 @@ e7b398dbd02b   postgres:16-alpine                         "docker-entrypoint.s�
 | [OpenAI](https://platform.openai.com/) | `https://api.openai.com` | [openai.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/openai.sql) |
 | [OpenRouter](https://openrouter.ai/) | `https://openrouter.ai/api/v1` | [openrouter.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/openrouter.sql) |
 | [DeepSeek](https://platform.deepseek.com/) | `https://api.deepseek.com` | [deepseek.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/deepseek.sql) |
+| [Ollama](https://ollama.com/) | `http://host.docker.internal:11434/v1` | [ollama.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/ollama.sql) |
 
 选择一个提供商并执行其 SQL 文件：
 
@@ -136,8 +134,8 @@ docker compose up -d --remove-orphans
 
 如果应用程序无法正常运行，您可以尝试以下步骤：
 
-1. 运行 `docker ps` 来识别不健康的容器。
-2. 运行 `docker logs <container_id>` 来获取更多错误信息。
+1. 运行 `docker ps --filter name=refly_ | grep -v 'healthy'` 来识别 **不健康** 的容器（状态不处于 `healthy`）。
+2. 运行 `docker logs <container_id>` 来获取更多关于不健康容器的错误信息。
 3. 如果不健康的容器是 `refly_api`，您可以首先尝试运行 `docker restart refly_api` 来重启容器。
 4. 对于其他容器，您可以在容器日志中搜索错误消息的原因。
 

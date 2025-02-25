@@ -77,7 +77,7 @@ const sidebar = {
       text: "指南",
       items: [
         { text: "快速上手", link: "/zh/guide/crash-course" },
-        { text: "自主部署", link: "/zh/guide/self-deploy" },
+        { text: "私有部署", link: "/zh/guide/self-deploy" },
         { text: "配置", link: "/zh/guide/configuration" },
         { text: "Chrome 插件", link: "/zh/guide/chrome-extension" },
       ],
