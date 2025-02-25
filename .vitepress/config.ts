@@ -126,7 +126,18 @@ export default defineConfig({
   cleanUrls: true,
 
   // Configure head
-  head: [['link', { rel: 'icon', href: '/logo/logo.svg' }]],
+  head: [
+    ['link', { rel: 'icon', href: '/logo/logo.svg' }],
+    ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-RS0SJYDFJF' }],
+    [
+      'script',
+      {},
+      `window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RS0SJYDFJF');`,
+    ],
+  ],
 
   // i18n configuration
   locales: {
