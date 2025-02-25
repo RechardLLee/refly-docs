@@ -42,7 +42,7 @@ Therefore, we have implemented 4 core capabilities:
    1. Canvas-style dialogue exploration for deep topic research
    2. Intelligent context management for more focused conversations
    3. Access knowledge base anytime to break through research bottlenecks
-   4. Support real-time collaboration for collective wisdom
+   4. Support real-time collaboration for collective wisdom(coming soon...)
 
 ![feature-3](/images/feature3.png)
 
