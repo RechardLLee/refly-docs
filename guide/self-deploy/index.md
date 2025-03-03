@@ -45,7 +45,7 @@ Notes on must-set environment variables:
 - **Envs for Web Search**:
   - `SERPER_API_KEY`: [Serper](https://serper.dev/) API key
 
-::: tip
+::: info
 A comprehensive list of all the configuration options is available in the [Configuration](../configuration.md).
 :::
 
@@ -54,6 +54,10 @@ A comprehensive list of all the configuration options is available in the [Confi
 ```bash
 docker compose up -d
 ```
+
+::: tip For passionate users
+By default, the docker compose file will pull the `latest` image, which is the latest stable version. If you want to use the up-to-date version synced with the Refly Cloud, you can replace image tag `latest` with `nightly` in the `docker-compose.yml` file.
+:::
 
 You can run `docker ps` to check the status of the containers. The expected status for each container should be `Up` and `healthy`. An example output is shown below:
 
@@ -84,7 +88,7 @@ Models are configured via the `refly.model_infos` table within the `refly_db` Po
 
 | Provider | `OPENAI_BASE_URL` | SQL File |
 | -------- | ----------------- | -------- |
-| [OpenAI](https://platform.openai.com/) | `https://api.openai.com` | [openai.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/openai.sql) |
+| [OpenAI](https://platform.openai.com/) | (empty) | [openai.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/openai.sql) |
 | [OpenRouter](https://openrouter.ai/) | `https://openrouter.ai/api/v1` | [openrouter.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/openrouter.sql) |
 | [DeepSeek](https://platform.deepseek.com/) | `https://api.deepseek.com` | [deepseek.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/deepseek.sql) |
 | [Ollama](https://ollama.com/) | `http://host.docker.internal:11434/v1` | [ollama.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/ollama.sql) |
