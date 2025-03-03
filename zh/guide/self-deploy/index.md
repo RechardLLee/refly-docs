@@ -45,7 +45,7 @@ cp ../../apps/api/.env.example .env
 - **网络搜索相关环境变量**：
   - `SERPER_API_KEY`：[Serper](https://serper.dev/) API 密钥
 
-::: tip
+::: info
 所有配置选项的完整列表可以在[配置指南](../configuration.md)中找到。
 :::
 
@@ -54,6 +54,10 @@ cp ../../apps/api/.env.example .env
 ```bash
 docker compose up -d
 ```
+
+::: tip 对于热情的用户
+默认情况下，docker compose 文件会拉取 `latest` 镜像，这是最新的稳定版本。如果您想使用与 Refly Cloud 同步的最新开发版本，可以在 `docker-compose.yml` 文件中将镜像标签 `latest` 替换为 `nightly`。
+:::
 
 您可以运行 `docker ps` 来检查容器的状态。每个容器的预期状态应该是 `Up` 和 `healthy`。以下是示例输出：
 
@@ -82,9 +86,9 @@ e7b398dbd02b   postgres:16-alpine                         "docker-entrypoint.s�
 
 模型配置通过 `refly_db` PostgreSQL 数据库中的 `refly.model_infos` 表进行管理。我们为一些常见的提供商准备了推荐的模型 SQL 文件：
 
-| 提供商 | `OPENAI_BASE_URL` | SQL 文件
+| 提供商 | `OPENAI_BASE_URL` | SQL 文件 |
 | -------- | ----------------- | -------- |
-| [OpenAI](https://platform.openai.com/) | `https://api.openai.com` | [openai.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/openai.sql) |
+| [OpenAI](https://platform.openai.com/) | (空) | [openai.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/openai.sql) |
 | [OpenRouter](https://openrouter.ai/) | `https://openrouter.ai/api/v1` | [openrouter.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/openrouter.sql) |
 | [DeepSeek](https://platform.deepseek.com/) | `https://api.deepseek.com` | [deepseek.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/deepseek.sql) |
 | [Ollama](https://ollama.com/) | `http://host.docker.internal:11434/v1` | [ollama.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/ollama.sql) |

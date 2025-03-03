@@ -20,9 +20,9 @@
 | 环境变量 | 说明 | 默认值 |
 | --- | --- | --- |
 | OPENAI_API_KEY | [OpenAI](https://openai.com/) 或其他兼容供应方的 API 密钥，用于 LLM 推理和嵌入 | (未设置) |
-| OPENAI_BASE_URL | OpenAI 兼容供应方的基础 URL，用于 LLM 推理和嵌入 | `https://api.openai.com` |
+| OPENAI_BASE_URL | OpenAI 兼容供应方的基础 URL，用于 LLM 推理和嵌入 | (未设置) |
 | OPENROUTER_API_KEY | [OpenRouter](https://openrouter.ai/) API 密钥，用于 LLM 推理 | (未设置) |
-| JINA_API_KEY | [Jina](https://jina.ai/) API 密钥，用于嵌入 | (未设置) |
+| JINA_API_KEY | [Jina](https://jina.ai/) API 密钥，用于嵌入和网页解析 | (未设置) |
 | FIREWORKS_API_KEY | [Fireworks](https://fireworks.ai/) API 密钥，用于嵌入 | (未设置) |
 | SERPER_API_KEY | [Serper](https://serper.dev/) API 密钥，用于在线搜索 | (未设置) |
 | MARKER_API_KEY | [Marker](https://www.datalab.to/) API 密钥，用于 PDF 解析 | (未设置) |

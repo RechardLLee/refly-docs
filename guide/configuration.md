@@ -20,9 +20,9 @@ The following are the detailed configurations for the API server. You can inject
 | Env | Description | Default Value |
 | --- | --- | --- |
 | OPENAI_API_KEY | API key for OpenAI (or any other compatible provider), used for LLM inference and embeddings | (not set) |
-| OPENAI_BASE_URL | Base URL for OpenAI compatible provider | `https://api.openai.com` |
+| OPENAI_BASE_URL | Base URL for OpenAI compatible provider | (not set) |
 | OPENROUTER_API_KEY | [OpenRouter](https://openrouter.ai/) API key, used for LLM inference | (not set) |
-| JINA_API_KEY | [Jina](https://jina.ai/) API key, used for embeddings | (not set) |
+| JINA_API_KEY | [Jina](https://jina.ai/) API key, used for embeddings and weblink parsing | (not set) |
 | FIREWORKS_API_KEY | [Fireworks](https://fireworks.ai/) API key, used for embedding | (not set) |
 | SERPER_API_KEY | [Serper](https://serper.dev/) API key, used for online search | (not set) |
 | MARKER_API_KEY | [Marker](https://www.datalab.to/) API key, used for PDF parsing | (not set) |
