@@ -14,7 +14,7 @@ const imageMap = new Map();
 async function convertImagesToWebp() {
   try {
     const files = await fs.readdir(imagesDir);
-    const imageFiles = files.filter(file => {
+    const imageFiles = files.filter((file) => {
       const ext = path.extname(file).toLowerCase();
       return ['.png', '.jpg', '.jpeg', '.gif'].includes(ext);
     });
@@ -28,18 +28,16 @@ async function convertImagesToWebp() {
 
       try {
         // Convert to WebP
-        await sharp(inputPath)
-          .webp({ quality: 80 })
-          .toFile(outputPath);
-        
+        await sharp(inputPath).webp({ quality: 80 }).toFile(outputPath);
+
         // Store the mapping from original path to WebP path (for use in Markdown replacements)
         const originalRelativePath = path.join('/images', file);
         const webpRelativePath = path.join('/images', `${fileInfo.name}.webp`);
         imageMap.set(originalRelativePath, webpRelativePath);
-        
+
         // Remove the original file
         await fs.unlink(inputPath);
-        
+
         console.log(`Converted and replaced: ${file} -> ${fileInfo.name}.webp`);
       } catch (error) {
         console.error(`Error converting ${file}: ${error.message}`);
@@ -56,7 +54,7 @@ async function findMarkdownFiles(dir) {
 
   for (const entry of entries) {
     const fullPath = path.join(dir, entry.name);
-    
+
     if (entry.isDirectory()) {
       // Skip node_modules and .git directories
       if (entry.name !== 'node_modules' && entry.name !== '.git') {
@@ -83,11 +81,11 @@ async function updateMarkdownFiles() {
       // Replace image links in Markdown
       // This regex matches Markdown image syntax: ![alt text](/images/image.png)
       const regex = /!\[([^\]]*)\]\(([^)]+)\)/g;
-      
+
       content = content.replace(regex, (match, alt, imagePath) => {
         // Normalize the path to handle different formats
         const normalizedPath = imagePath.trim();
-        
+
         // Check if this image is in our map
         for (const [originalPath, webpPath] of imageMap.entries()) {
           if (normalizedPath.includes(originalPath)) {
@@ -95,18 +93,18 @@ async function updateMarkdownFiles() {
             return `![${alt}](${webpPath})`;
           }
         }
-        
+
         // If no match found, return the original
         return match;
       });
 
       // Also handle HTML img tags
       const imgTagRegex = /<img\s+[^>]*src=["']([^"']+)["'][^>]*>/g;
-      
+
       content = content.replace(imgTagRegex, (match, imagePath) => {
         // Normalize the path to handle different formats
         const normalizedPath = imagePath.trim();
-        
+
         // Check if this image is in our map
         for (const [originalPath, webpPath] of imageMap.entries()) {
           if (normalizedPath.includes(originalPath)) {
@@ -114,7 +112,7 @@ async function updateMarkdownFiles() {
             return match.replace(imagePath, webpPath);
           }
         }
-        
+
         // If no match found, return the original
         return match;
       });
@@ -131,14 +129,14 @@ async function updateMarkdownFiles() {
 
 async function main() {
   console.log('Starting image conversion and Markdown update process...');
-  
+
   await convertImagesToWebp();
   await updateMarkdownFiles();
-  
+
   console.log('Process completed successfully!');
 }
 
-main().catch(error => {
+main().catch((error) => {
   console.error('An error occurred:', error);
   process.exit(1);
 });

@@ -93,14 +93,14 @@
 
 /* Remove title bottom border */
 .VPNavBarTitle.has-sidebar {
+  border-bottom: none !important;
+
+  /* Remove bottom border from sidebar title */
+  a.title {
     border-bottom: none !important;
-  
-    /* Remove bottom border from sidebar title */
-    a.title {
-      border-bottom: none !important;
-      border-bottom-color: transparent !important;
-    } 
+    border-bottom-color: transparent !important;
   }
+}
 
 /* Dark mode specific styles */
 .dark .VPSidebar .title {

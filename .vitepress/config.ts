@@ -9,8 +9,8 @@ const enNav = [
   },
   { text: 'Community', link: '/community/contact-us' },
   {
-    text: 'v0.4.0',
-    items: [{ text: 'Changelog', link: '/changelog/v0.4.0' }],
+    text: 'v0.4.1',
+    items: [{ text: 'Changelog', link: '/changelog/v0.4.1' }],
   },
 ];
 
@@ -22,8 +22,8 @@ const zhNav = [
   },
   { text: '社区', link: '/zh/community/contact-us' },
   {
-    text: 'v0.4.0',
-    items: [{ text: '更新日志', link: '/zh/changelog/v0.4.0' }],
+    text: 'v0.4.1',
+    items: [{ text: '更新日志', link: '/zh/changelog/v0.4.1' }],
   },
 ];
 
@@ -61,6 +61,7 @@ const sidebar = {
     {
       text: 'Changelog',
       items: [
+        { text: 'v0.4.1', link: '/changelog/v0.4.1' },
         { text: 'v0.4.0', link: '/changelog/v0.4.0' },
         { text: 'v0.3.0', link: '/changelog/v0.3.0' },
         { text: 'v0.2.4', link: '/changelog/v0.2.4' },
@@ -105,6 +106,7 @@ const sidebar = {
     {
       text: '更新日志',
       items: [
+        { text: 'v0.4.1', link: '/zh/changelog/v0.4.1' },
         { text: 'v0.4.0', link: '/zh/changelog/v0.4.0' },
         { text: 'v0.3.0', link: '/zh/changelog/v0.3.0' },
         { text: 'v0.2.4', link: '/zh/changelog/v0.2.4' },
@@ -130,7 +132,13 @@ export default defineConfig({
   // Configure head
   head: [
     ['link', { rel: 'icon', href: '/logo/logo.svg' }],
-    ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-RS0SJYDFJF' }],
+    [
+      'script',
+      {
+        async: '',
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-RS0SJYDFJF',
+      },
+    ],
     [
       'script',
       {},
