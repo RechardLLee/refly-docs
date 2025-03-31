@@ -47,6 +47,7 @@ const sidebar = {
         },
         { text: "Configuration", link: "/guide/configuration" },
         { text: "Chrome Extension", link: "/guide/chrome-extension" },
+        { text: "Video Tutorials", link: "/guide/video-tutorials" },
       ],
     },
     {
@@ -97,6 +98,7 @@ const sidebar = {
         },
         { text: "配置", link: "/zh/guide/configuration" },
         { text: "Chrome 插件", link: "/zh/guide/chrome-extension" },
+        { text: "视频教程", link: "/zh/guide/video-tutorials" },
       ],
     },
     {
