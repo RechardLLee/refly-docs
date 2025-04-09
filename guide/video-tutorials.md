@@ -56,6 +56,42 @@ Welcome to our collection of Refly video tutorials. These videos will help you g
   <iframe src="//player.bilibili.com/player.html?isOutside=true&bvid=BV13oZzYnEWA&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 </div>
 
+## 🚂 Refly Application Templates - AI-generated social media covers
+
+<div class="video-container" style="margin-top: 12px">
+  <iframe src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1n3ZsYREGM&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+</div>
+
+## 🧜 Mermaid.js Syntax Overview | Complete guide to all 22 charts in version 11.6 (Part 1)
+
+<div class="video-container" style="margin-top: 12px">
+  <iframe src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1dPfFYjEx5&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+</div>
+
+## 🧜 Mermaid.js Syntax Overview | Complete guide to all 22 charts in version 11.6 (Part 2)
+
+<div class="video-container" style="margin-top: 12px">
+  <iframe src="//player.bilibili.com/player.html?isOutside=true&bvid=BV13mfTYcEJg&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+</div>
+
+## 🚂 Skill Unlock! From Refly Mind Maps to Rapid Document Creation 🔮
+
+<div class="video-container" style="margin-top: 12px">
+  <iframe src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1ZoRBYSEnw&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+</div>
+
+## 🎮 Fun Game Programming Challenge! Claude 🆚 Gemini 🆚 DeepSeek
+
+<div class="video-container" style="margin-top: 12px">
+  <iframe src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1YcR2YcENC&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+</div>
+
+## 🚂 Technical Course Template - Using Various Components to Create Training Materials
+
+<div class="video-container" style="margin-top: 12px">
+  <iframe src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1QsRmYYE8J&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+</div>
+
 <style>
 .video-container {
   position: relative;
@@ -81,10 +117,5 @@ Welcome to our collection of Refly video tutorials. These videos will help you g
   width: 100%;
   height: 100%;
   border: 0;
-}
-
-h3 {
-  margin-top: 50px;
-  margin-bottom: 20px;
 }
 </style> 

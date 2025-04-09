@@ -57,6 +57,42 @@
   <iframe src="//player.bilibili.com/player.html?isOutside=true&bvid=BV13oZzYnEWA&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 </div>
 
+## 🚂 Refly 应用模板 - AI 生成自媒体封面
+
+<div class="video-container" style="margin-top: 12px">
+  <iframe src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1n3ZsYREGM&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+</div>
+
+## 🧜 Mermaid.js 语法概览｜11.6 版本全 2️⃣2️⃣ 种图表速通（上）
+
+<div class="video-container" style="margin-top: 12px">
+  <iframe src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1dPfFYjEx5&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+</div>
+
+## 🧜 Mermaid.js 语法概览｜11.6 版本全 2️⃣2️⃣ 种图表速通（下）
+
+<div class="video-container" style="margin-top: 12px">
+  <iframe src="//player.bilibili.com/player.html?isOutside=true&bvid=BV13mfTYcEJg&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+</div>
+
+## 🚂 技能解锁！Refly 思维导图 ⏩ 文稿创作速成 🔮
+
+<div class="video-container" style="margin-top: 12px">
+  <iframe src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1ZoRBYSEnw&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+</div>
+
+## 🎮 趣味游戏编程挑战！Claude 🆚 Gemini 🆚 DeepSeek
+
+<div class="video-container" style="margin-top: 12px">
+  <iframe src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1YcR2YcENC&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+</div>
+
+## 🚂 技术课件模板展示 - 整合各类组件制作培训课件
+
+<div class="video-container" style="margin-top: 12px">
+  <iframe src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1QsRmYYE8J&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+</div>
+
 
 <style>
 .video-container {
@@ -83,10 +119,5 @@
   width: 100%;
   height: 100%;
   border: 0;
-}
-
-h3 {
-  margin-top: 50px;
-  margin-bottom: 20px;
 }
 </style> 
