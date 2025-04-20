@@ -1,6 +1,6 @@
 # gitpod 部署
 
-访问网址 https://github.com/refly-ai/refly, 找到 Open in Gitpod 图标，点击图标。
+访问网址 https://github.com/refly-ai/refly, 找到 `Open in Gitpod` 图标，点击图标。
 ![部署到 Gitpod](../../public/images/deploy-to-gitpod.webp)
 
 如果是第一次，需要你用 GitHub 账号登录 gitpod， 弹出如下界面。
