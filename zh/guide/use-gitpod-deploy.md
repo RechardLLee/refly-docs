@@ -30,7 +30,8 @@ tasks:
 
 你可以发现 gitpod 实际提供了一个虚拟机，里面已经支持了 docker compose 部署， refly 本身支持 docker compose 部署，就无痛迁移到 gitpod。
 
-## 环境变量说明：
+## 定制化部署
+### 1. 环境变量说明：
 
 - **LLM 推理相关环境变量**：
   - `OPENAI_API_KEY`：您的 OpenAI API 密钥
@@ -53,6 +54,50 @@ tasks:
 ```shell
 cd deploy/docker && docker compose restart
 ```
+
+### 2. 初始化模型 {#initialize-models}
+
+模型配置通过 `refly_db` PostgreSQL 数据库中的 `refly.model_infos` 表进行管理。我们为一些常见的提供商准备了推荐的模型 SQL 文件：
+
+| 提供商 | `OPENAI_BASE_URL` | SQL 文件 |
+| -------- | ----------------- | -------- |
+| [OpenAI](https://platform.openai.com/) | (空) | [openai.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/openai.sql) |
+| [OpenRouter](https://openrouter.ai/) | `https://openrouter.ai/api/v1` | [openrouter.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/openrouter.sql) |
+| [DeepSeek](https://platform.deepseek.com/) | `https://api.deepseek.com` | [deepseek.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/deepseek.sql) |
+| [Ollama](https://ollama.com/) | `http://host.docker.internal:11434/v1` | [ollama.sql](https://github.com/refly-ai/refly/blob/main/deploy/model-providers/ollama.sql) |
+
+选择一个提供商并执行其 SQL 文件：
+
+```bash
+# 初始化推荐的 OpenAI 模型
+curl https://raw.githubusercontent.com/refly-ai/refly/main/deploy/model-providers/openai.sql | docker exec -i refly_db psql -U refly -d refly
+```
+
+```bash
+# 或者，初始化推荐的 OpenRouter 模型
+curl https://raw.githubusercontent.com/refly-ai/refly/main/deploy/model-providers/openrouter.sql | docker exec -i refly_db psql -U refly -d refly
+```
+
+```bash
+# 或者，初始化推荐的 DeepSeek 模型
+curl https://raw.githubusercontent.com/refly-ai/refly/main/deploy/model-providers/deepseek.sql | docker exec -i refly_db psql -U refly -d refly
+```
+
+::: warning
+Refly 目前仅支持一个模型提供商。如果决定切换到另一个提供商或遇到错误 `duplicate key value violates unique constraint "model_infos_name_key"`，您需要先清空 `refly.model_infos` 表：
+
+```bash
+docker exec -it refly_db psql -U refly -d refly -c "TRUNCATE TABLE refly.model_infos;"
+```
+点击 `问问AI`后，可以看到你初始化好的模型。 
+![ai-model-sql-init](../../public/images/ai-model-sql-init.webp)
+
+:::
+
+::: info
+有关模型配置的详细说明，请参阅[配置指南](./configuration.md#model-configuration)。
+:::
+
 
 ## 升级指南
 ```shell
