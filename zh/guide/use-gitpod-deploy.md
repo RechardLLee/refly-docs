@@ -31,7 +31,7 @@ tasks:
 你可以发现 gitpod 实际提供了一个虚拟机，里面已经支持了 docker compose 部署， refly 本身支持 docker compose 部署，就无痛迁移到 gitpod。
 
 ## 定制化部署
-### 1. 环境变量说明：
+### 1. 环境变量说明
 
 - **LLM 推理相关环境变量**：
   - `OPENAI_API_KEY`：您的 OpenAI API 密钥
@@ -114,7 +114,7 @@ cd deploy/docker && cp ../../apps/api/.env.example .env &&   docker compose up -
 ```
 
 ### 查看容器运行情况
-运行 `docker ps `, 每个容器的预期状态应该是 `Up` 和 `healthy`。以下是示例输出：
+运行 `docker ps`, 每个容器的预期状态应该是 `Up` 和 `healthy`。以下是示例输出：
 ```shell
 docker ps 
 CONTAINER ID   IMAGE                                      COMMAND                  CREATED          STATUS                    PORTS                                            NAMES
@@ -144,7 +144,7 @@ ca56521eebd6   refly_redis           0.26%     133.8MiB / 62.79GiB   0.21%     3
 
 运行 `docker ps --filter name=refly_ | grep -v 'healthy'` 来识别 **不健康** 的容器（状态不处于 `healthy`）。
 
-查看具体的服务的日志，例如 `api`, `docker compose logs api -f`, 从docker compose 文件的 service 的命名确定，不要跟 Docker 的容器名混淆。
+查看具体的服务的日志，例如 `api`, `docker compose logs api -f`, 从 docker compose 文件的 service 的命名确定，不要跟 Docker 的容器名混淆。
 
 
 
