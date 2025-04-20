@@ -30,6 +30,30 @@ tasks:
 
 你可以发现 gitpod 实际提供了一个虚拟机，里面已经支持了 docker compose 部署， refly 本身支持 docker compose 部署，就无痛迁移到 gitpod。
 
+## 环境变量说明：
+
+- **LLM 推理相关环境变量**：
+  - `OPENAI_API_KEY`：您的 OpenAI API 密钥
+  - `OPENAI_BASE_URL`: 其他 OpenAI 兼容提供商的根 URL
+  - `OPENROUTER_API_KEY`：您的 OpenRouter API 密钥（如果提供，将覆盖官方 OpenAI 端点）
+- **向量嵌入相关环境变量**：
+  - `EMBEDDINGS_PROVIDER`：向量嵌入提供商，目前支持 `openai`、`jina` 和 `fireworks`。默认为`jina`，可以按照实际情况进行修改。
+  - `EMBEDDINGS_MODEL_NAME`：向量嵌入模型名称，不同提供商可能不同
+  - `OPENAI_API_KEY`：如果 `EMBEDDINGS_PROVIDER` 为 `openai` 则必需
+  - `JINA_API_KEY`：如果 `EMBEDDINGS_PROVIDER` 为 `jina` 则必需
+  - `FIREWORKS_API_KEY`：如果 `EMBEDDINGS_PROVIDER` 为 `fireworks` 则必需
+- **网络搜索相关环境变量**：
+  - `SERPER_API_KEY`：[Serper](https://serper.dev/) API 密钥
+
+::: info
+所有配置选项的完整列表可以在[配置指南](./configuration.md)中找到。
+:::
+
+修改完 `.env` 文件后，需要重启。
+```shell
+cd deploy/docker && docker compose restart
+```
+
 ## 升级指南
 ```shell
 docker compose pull
@@ -45,7 +69,7 @@ cd deploy/docker && cp ../../apps/api/.env.example .env &&   docker compose up -
 ```
 
 ### 查看容器运行情况
-运行 `docker ps `
+运行 `docker ps `, 每个容器的预期状态应该是 `Up` 和 `healthy`。以下是示例输出：
 ```shell
 docker ps 
 CONTAINER ID   IMAGE                                      COMMAND                  CREATED          STATUS                    PORTS                                            NAMES
@@ -71,7 +95,9 @@ ca56521eebd6   refly_redis           0.26%     133.8MiB / 62.79GiB   0.21%     3
 4b0b9d2100d0   refly_minio           0.06%     91.88MiB / 62.79GiB   0.14%     14.1kB / 7.32kB   0B / 3.56MB       21
 ```
 
-运行日志查看，运行 `docker compose logs -f`， `Ctrl + C` 可以退出。 
+运行日志查看，运行 `docker compose logs -f`， `Ctrl + C` 可以退出。
+
+运行 `docker ps --filter name=refly_ | grep -v 'healthy'` 来识别 **不健康** 的容器（状态不处于 `healthy`）。
 
 查看具体的服务的日志，例如 `api`, `docker compose logs api -f`, 从docker compose 文件的 service 的命名确定，不要跟 Docker 的容器名混淆。
 
