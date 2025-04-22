@@ -1,11 +1,11 @@
-# gitpod 部署
+# Gitpod 部署
 
 访问网址 https://github.com/refly-ai/refly, 找到 `Open in Gitpod` 图标，点击图标。
 ![部署到 Gitpod](../../public/images/deploy-to-gitpod.webp)
 
-如果是第一次，需要你用 GitHub 账号登录 gitpod， 弹出如下界面。
+如果是第一次，需要你用 GitHub 账号登录 Gitpod， 弹出如下界面。
 
-![gitpod new workspace](../../public/images/gitpod-new-workspace.webp)
+![Gitpod new workspace](../../public/images/gitpod-new-workspace.webp)
 
 
 如果你 fork 该项目，并想保存你的修改，建议你点击 `refly` 的下拉框，换成你的项目地址。
@@ -22,13 +22,13 @@ tasks:
 
 
 
-![gitpod deploy init](../../public/images/docker-compose-up.webp)
+![Gitpod deploy init](../../public/images/docker-compose-up.webp)
 部署时间大概需要几分钟。
 
 部署成功了！
-![gitpod deploy success](../../public/images/gitpod-deploy-success.webp)
+![Gitpod deploy success](../../public/images/gitpod-deploy-success.webp)
 
-你可以发现 gitpod 实际提供了一个虚拟机，里面已经支持了 docker compose 部署， refly 本身支持 docker compose 部署，就无痛迁移到 gitpod。
+你可以发现 Gitpod 实际提供了一个虚拟机，里面已经支持了 Docker compose 部署， refly 本身支持 Docker compose 部署，就无痛迁移到 Gitpod。
 
 ## 定制化部署
 ### 1. 环境变量说明
@@ -52,7 +52,8 @@ tasks:
 
 修改完 `.env` 文件后，需要重启。
 ```shell
-cd deploy/docker && docker compose restart
+cd deploy/docker
+docker compose restart
 ```
 
 ### 2. 初始化模型 {#initialize-models}
@@ -68,18 +69,17 @@ cd deploy/docker && docker compose restart
 
 选择一个提供商并执行其 SQL 文件：
 
+初始化推荐的 OpenAI 模型
 ```bash
-# 初始化推荐的 OpenAI 模型
 curl https://raw.githubusercontent.com/refly-ai/refly/main/deploy/model-providers/openai.sql | docker exec -i refly_db psql -U refly -d refly
 ```
-
+或者，初始化推荐的 OpenRouter 模型
 ```bash
-# 或者，初始化推荐的 OpenRouter 模型
 curl https://raw.githubusercontent.com/refly-ai/refly/main/deploy/model-providers/openrouter.sql | docker exec -i refly_db psql -U refly -d refly
 ```
 
+或者，初始化推荐的 DeepSeek 模型
 ```bash
-# 或者，初始化推荐的 DeepSeek 模型
 curl https://raw.githubusercontent.com/refly-ai/refly/main/deploy/model-providers/deepseek.sql | docker exec -i refly_db psql -U refly -d refly
 ```
 
@@ -107,16 +107,17 @@ docker compose up -d --remove-orphans
 ```
 
 ## 异常排除
-### gipod init 失败
+### Gitpod init 失败
 自己在终端手动执行 
 ```shell
-cd deploy/docker && cp ../../apps/api/.env.example .env &&   docker compose up -d
+cd deploy/docker
+cp ../../apps/api/.env.example .env
+docker compose up -d
 ```
 
 ### 查看容器运行情况
 运行 `docker ps`, 每个容器的预期状态应该是 `Up` 和 `healthy`。以下是示例输出：
-```shell
-docker ps 
+```text
 CONTAINER ID   IMAGE                                      COMMAND                  CREATED          STATUS                    PORTS                                            NAMES
 f2d71a5494b3   reflyai/refly-api:nightly                  "docker-entrypoint.s…"   13 minutes ago   Up 12 minutes (healthy)   3000/tcp, 0.0.0.0:5800-5801->5800-5801/tcp       refly_api
 1d339d1ba317   reflyai/refly-web:nightly                  "/docker-entrypoint.…"   13 minutes ago   Up 12 minutes (healthy)   0.0.0.0:5700->80/tcp                             refly_web
@@ -128,8 +129,7 @@ ca56521eebd6   redis/redis-stack:latest                   "/entrypoint.sh"      
 ```
 
 或者运行 `docker status`, `Ctrl + C` 可以退出
-```shell
-docker stats
+```text
 CONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O         PIDS
 f2d71a5494b3   refly_api             0.04%     160.9MiB / 62.79GiB   0.25%     1.5MB / 3.37MB    3.5MB / 229kB     32
 1d339d1ba317   refly_web             0.00%     13.49MiB / 62.79GiB   0.02%     301kB / 3.41MB    8.19kB / 8.19kB   17

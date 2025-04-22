@@ -12,6 +12,7 @@ If you've forked the project and want to save your modifications, it's recommend
 Click `Continue`.
 
 Choose your preferred theme. The `TERMINAL` output below will show deployment logs. The deployment configuration is in the `.gitpod.yml` file.
+
 ```yaml
 tasks:
   - name: Deploy Services
@@ -48,7 +49,8 @@ A complete list of all configuration options can be found in the [Configuration 
 
 After modifying the `.env` file, a restart is required.
 ```shell
-cd deploy/docker && docker compose restart
+cd deploy/docker 
+docker compose restart
 ```
 
 ### 2. Initialize Models {#initialize-models}
@@ -64,18 +66,18 @@ Model configuration is managed through the `refly.model_infos` table in the `ref
 
 Choose a provider and execute its SQL file:
 
+Initialize recommended OpenAI models:
 ```bash
-# Initialize recommended OpenAI models
 curl https://raw.githubusercontent.com/refly-ai/refly/main/deploy/model-providers/openai.sql | docker exec -i refly_db psql -U refly -d refly
 ```
 
+Or, initialize recommended OpenRouter models:
 ```bash
-# Or, initialize recommended OpenRouter models
 curl https://raw.githubusercontent.com/refly-ai/refly/main/deploy/model-providers/openrouter.sql | docker exec -i refly_db psql -U refly -d refly
 ```
 
+Or, initialize recommended DeepSeek models:
 ```bash
-# Or, initialize recommended DeepSeek models
 curl https://raw.githubusercontent.com/refly-ai/refly/main/deploy/model-providers/deepseek.sql | docker exec -i refly_db psql -U refly -d refly
 ```
 
@@ -85,9 +87,9 @@ Refly currently only supports one model provider. If you decide to switch to ano
 ```bash
 docker exec -it refly_db psql -U refly -d refly -c "TRUNCATE TABLE refly.model_infos;"
 ```
+
 After clicking `Ask AI`, you can see your initialized models.
 ![AI model SQL init](../public/images/ai-model-sql-init.webp)
-
 :::
 
 ::: info
@@ -95,6 +97,7 @@ For detailed model configuration instructions, please refer to the [Configuratio
 :::
 
 ## Upgrade Guide
+
 ```shell
 docker compose pull
 docker compose down
@@ -104,14 +107,17 @@ docker compose up -d --remove-orphans
 ## Troubleshooting
 ### Gitpod init failure
 Execute manually in the terminal:
+
 ```shell
-cd deploy/docker && cp ../../apps/api/.env.example .env &&   docker compose up -d
+cd deploy/docker  
+cp ../../apps/api/.env.example .env  
+docker compose up -d
 ```
 
 ### Checking container status
 Run `docker ps`, each container's expected status should be `Up` and `healthy`. Here's an example output:
-```shell
-docker ps 
+
+```text
 CONTAINER ID   IMAGE                                      COMMAND                  CREATED          STATUS                    PORTS                                            NAMES
 f2d71a5494b3   reflyai/refly-api:nightly                  "docker-entrypoint.s…"   13 minutes ago   Up 12 minutes (healthy)   3000/tcp, 0.0.0.0:5800-5801->5800-5801/tcp       refly_api
 1d339d1ba317   reflyai/refly-web:nightly                  "/docker-entrypoint.…"   13 minutes ago   Up 12 minutes (healthy)   0.0.0.0:5700->80/tcp                             refly_web
@@ -123,8 +129,8 @@ ca56521eebd6   redis/redis-stack:latest                   "/entrypoint.sh"      
 ```
 
 Or run `docker stats`, press `Ctrl + C` to exit:
-```shell
-docker stats
+
+```text
 CONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O         PIDS
 f2d71a5494b3   refly_api             0.04%     160.9MiB / 62.79GiB   0.25%     1.5MB / 3.37MB    3.5MB / 229kB     32
 1d339d1ba317   refly_web             0.00%     13.49MiB / 62.79GiB   0.02%     301kB / 3.41MB    8.19kB / 8.19kB   17
@@ -140,7 +146,3 @@ To view logs, run `docker compose logs -f`, press `Ctrl + C` to exit.
 Run `docker ps --filter name=refly_ | grep -v 'healthy'` to identify **unhealthy** containers (those not in `healthy` status).
 
 To view logs for specific services, for example `api`, run `docker compose logs api -f`. Note that the service names are determined by the docker compose file, not the Docker container names.
-
-
-
-
