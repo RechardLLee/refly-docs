@@ -86,6 +86,10 @@ const sidebar = {
               link: "/community-version/self-deploy/",
             },
             {
+              text: "Gitpod Deployment",
+              link: "/guide/use-gitpod-deploy",
+            },
+            {
               text: "Ollama Integration",
               link: "/community-version/self-deploy/ollama",
             },
@@ -190,6 +194,10 @@ const sidebar = {
           items: [
             { text: "部署指南", link: "/zh/community-version/self-deploy/" },
             {
+              text: "Gitpod 部署",
+              link: "/zh/guide/use-gitpod-deploy",
+            },
+            {
               text: "Ollama 集成",
               link: "/zh/community-version/self-deploy/ollama",
             },
@@ -277,6 +285,12 @@ export default defineConfig({
     gtag('config', 'G-RS0SJYDFJF');`,
     ],
   ],
+
+  // File path rewrites to map /en/* files to root URLs
+  rewrites: {
+    "en/index.md": "index.md",
+    "en/:path*": ":path*",
+  },
 
   // i18n configuration
   locales: {

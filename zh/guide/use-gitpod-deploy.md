@@ -1,11 +1,11 @@
 # Gitpod 部署
 
 访问网址 https://github.com/refly-ai/refly, 找到 `Open in Gitpod` 图标，点击图标。
-![部署到 Gitpod](../../public/images/deploy-to-gitpod.webp)
+![部署到 Gitpod](/images/deploy-to-gitpod.webp)
 
 如果是第一次，需要你用 GitHub 账号登录 Gitpod， 弹出如下界面。
 
-![Gitpod new workspace](../../public/images/gitpod-new-workspace.webp)
+![Gitpod new workspace](/images/gitpod-new-workspace.webp)
 
 
 如果你 fork 该项目，并想保存你的修改，建议你点击 `refly` 的下拉框，换成你的项目地址。
@@ -22,11 +22,11 @@ tasks:
 
 
 
-![Gitpod deploy init](../../public/images/docker-compose-up.webp)
+![Gitpod deploy init](/images/docker-compose-up.webp)
 部署时间大概需要几分钟。
 
 部署成功了！
-![Gitpod deploy success](../../public/images/gitpod-deploy-success.webp)
+![Gitpod deploy success](/images/gitpod-deploy-success.webp)
 
 你可以发现 Gitpod 实际提供了一个虚拟机，里面已经支持了 Docker compose 部署， refly 本身支持 Docker compose 部署，就无痛迁移到 Gitpod。
 
@@ -90,7 +90,7 @@ Refly 目前仅支持一个模型提供商。如果决定切换到另一个提�
 docker exec -it refly_db psql -U refly -d refly -c "TRUNCATE TABLE refly.model_infos;"
 ```
 点击 `问问AI`后，可以看到你初始化好的模型。 
-![ai-model-sql-init](../../public/images/ai-model-sql-init.webp)
+![ai-model-sql-init](/images/ai-model-sql-init.webp)
 
 :::
 
