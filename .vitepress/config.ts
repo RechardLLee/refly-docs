@@ -34,20 +34,78 @@ const sidebar = {
   en: [
     {
       text: "Getting Started",
-      items: [{ text: "Welcome to Refly", link: "/" }],
+      items: [
+        { text: "Welcome to Refly", link: "/" }, // Points to index.md
+        { text: "Crash Course", link: "/guide/crash-course" },
+        { text: "Introduction", link: "/guide/introduction" },
+        { text: "Video Tutorials", link: "/guide/video-tutorials" },
+        // Core Concepts needs to be created
+        // { text: "Core Concepts", link: "/getting-started/core-concepts" },
+      ],
     },
     {
-      text: "Guide",
+      text: "Cloud Version",
       items: [
-        { text: "Crash Course", link: "/guide/crash-course" },
+        {
+          text: "Feature Intro",
+          items: [
+            { text: "Product Overview", link: "/cloud/feature-intro/" },
+            { text: "Ask AI", link: "/cloud/feature-intro/ask-ai" },
+            {
+              text: "Canvas and Nodes",
+              link: "/cloud/feature-intro/canvas-nodes.md",
+            },
+            {
+              text: "Creation Toolbar",
+              link: "/cloud/feature-intro/creation-toolbar",
+            },
+            {
+              text: "Global Search",
+              link: "/cloud/feature-intro/global-search",
+            },
+            {
+              text: "Knowledge Base",
+              link: "/cloud/feature-intro/knowledge-base",
+            },
+            { text: "Templates", link: "/cloud/feature-intro/templates" },
+            { text: "UI Overview", link: "/cloud/feature-intro/ui-overview" },
+          ],
+        },
+        { text: "Chrome Extension", link: "/cloud/chrome-extension" },
+      ],
+    },
+    {
+      text: "Community Version",
+      items: [
+        { text: "Community Version Overview", link: "/community-version/" },
         {
           text: "Self-Deploy",
-          link: "/guide/self-deploy",
-          items: [{ text: "Ollama", link: "/guide/self-deploy/ollama" }],
+          items: [
+            {
+              text: "Deployment Guide",
+              link: "/community-version/self-deploy/",
+            },
+            {
+              text: "Ollama Integration",
+              link: "/community-version/self-deploy/ollama",
+            },
+            {
+              text: "Configuration Guide",
+              link: "/community-version/self-deploy/configuration",
+            },
+          ],
         },
-        { text: "Configuration", link: "/guide/configuration" },
-        { text: "Chrome Extension", link: "/guide/chrome-extension" },
-        { text: "Video Tutorials", link: "/guide/video-tutorials" },
+        { text: "FAQ", link: "/community-version/faq" },
+      ],
+    },
+    {
+      text: "Scenarios",
+      items: [
+        { text: "Scenarios", link: "/scenarios/" },
+        {
+          text: "Create Tech PPT in 15 mins",
+          link: "/scenarios/create-tech-ppt",
+        },
       ],
     },
     {
@@ -86,20 +144,72 @@ const sidebar = {
   zh: [
     {
       text: "入门",
-      items: [{ text: "欢迎使用 Refly", link: "/zh" }],
+      items: [
+        { text: "欢迎使用 Refly", link: "/zh/" }, // 指向 zh/index.md
+        { text: "快速上手", link: "/zh/guide/crash-course" },
+        { text: "入门介绍", link: "/zh/guide/introduction" },
+        { text: "视频教程", link: "/zh/guide/video-tutorials" },
+        // 核心概念需要新建文件后添加链接
+        // { text: "核心概念", link: "/zh/getting-started/core-concepts" },
+      ],
     },
     {
-      text: "指南",
+      text: "云版本",
       items: [
-        { text: "快速上手", link: "/zh/guide/crash-course" },
+        {
+          text: "功能介绍",
+          items: [
+            { text: "功能介绍概览", link: "/zh/cloud/feature-intro/" }, // 指向 zh/cloud/feature-intro/index.md
+            { text: "问问 AI", link: "/zh/cloud/feature-intro/ask-ai" },
+            {
+              text: "画布和节点",
+              link: "/zh/cloud/feature-intro/canvas-nodes.md",
+            },
+            {
+              text: "创作工具栏",
+              link: "/zh/cloud/feature-intro/creation-toolbar",
+            },
+            { text: "全局搜索", link: "/zh/cloud/feature-intro/global-search" },
+            { text: "知识库", link: "/zh/cloud/feature-intro/knowledge-base" },
+            { text: "模板", link: "/zh/cloud/feature-intro/templates" },
+            {
+              text: "右上角界面概览",
+              link: "/zh/cloud/feature-intro/ui-overview",
+            },
+          ],
+        },
+        { text: "Chrome 插件", link: "/zh/cloud/chrome-extension" },
+      ],
+    },
+    {
+      text: "社区版本",
+      items: [
+        { text: "社区版本概览", link: "/zh/community-version/" },
         {
           text: "私有部署",
-          link: "/zh/guide/self-deploy/index",
-          items: [{ text: "Ollama", link: "/zh/guide/self-deploy/ollama" }],
+          items: [
+            { text: "部署指南", link: "/zh/community-version/self-deploy/" },
+            {
+              text: "Ollama 集成",
+              link: "/zh/community-version/self-deploy/ollama",
+            },
+            {
+              text: "配置指南",
+              link: "/zh/community-version/self-deploy/configuration",
+            },
+          ],
         },
-        { text: "配置", link: "/zh/guide/configuration" },
-        { text: "Chrome 插件", link: "/zh/guide/chrome-extension" },
-        { text: "视频教程", link: "/zh/guide/video-tutorials" },
+        { text: "常见问题", link: "/zh/community-version/faq" },
+      ],
+    },
+    {
+      text: "场景分享",
+      items: [
+        { text: "场景分享", link: "/zh/scenarios/" },
+        {
+          text: "15分钟快速制作一份技术架构PPT",
+          link: "/zh/scenarios/create-tech-ppt",
+        },
       ],
     },
     {
@@ -144,6 +254,9 @@ export default defineConfig({
 
   // Remove .html extensions from URLs
   cleanUrls: true,
+
+  // Ignore dead links in README.md and other files
+  ignoreDeadLinks: true,
 
   // Configure head
   head: [
