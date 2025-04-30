@@ -51,13 +51,25 @@ const sidebar = {
           items: [
             { text: "Product Overview", link: "/cloud/feature-intro/" },
             { text: "Ask AI", link: "/cloud/feature-intro/ask-ai" },
-            { text: "Canvas and Nodes", link: "/cloud/feature-intro/canvas-nodes.md" },
-            { text: "Creation Toolbar", link: "/cloud/feature-intro/creation-toolbar" },
-            { text: "Global Search", link: "/cloud/feature-intro/global-search" },
-            { text: "Knowledge Base", link: "/cloud/feature-intro/knowledge-base" },
+            {
+              text: "Canvas and Nodes",
+              link: "/cloud/feature-intro/canvas-nodes.md",
+            },
+            {
+              text: "Creation Toolbar",
+              link: "/cloud/feature-intro/creation-toolbar",
+            },
+            {
+              text: "Global Search",
+              link: "/cloud/feature-intro/global-search",
+            },
+            {
+              text: "Knowledge Base",
+              link: "/cloud/feature-intro/knowledge-base",
+            },
             { text: "Templates", link: "/cloud/feature-intro/templates" },
             { text: "UI Overview", link: "/cloud/feature-intro/ui-overview" },
-          ]
+          ],
         },
         { text: "Chrome Extension", link: "/cloud/chrome-extension" },
       ],
@@ -69,9 +81,18 @@ const sidebar = {
         {
           text: "Self-Deploy",
           items: [
-            { text: "Deployment Guide", link: "/community-version/self-deploy/" },
-            { text: "Ollama Integration", link: "/community-version/self-deploy/ollama" },
-            { text: "Configuration Guide", link: "/community-version/self-deploy/configuration" },
+            {
+              text: "Deployment Guide",
+              link: "/community-version/self-deploy/",
+            },
+            {
+              text: "Ollama Integration",
+              link: "/community-version/self-deploy/ollama",
+            },
+            {
+              text: "Configuration Guide",
+              link: "/community-version/self-deploy/configuration",
+            },
           ],
         },
         { text: "FAQ", link: "/community-version/faq" },
@@ -81,7 +102,10 @@ const sidebar = {
       text: "Scenarios",
       items: [
         { text: "Scenarios", link: "/scenarios/" },
-        { text: "Create Tech PPT in 15 mins", link: "/scenarios/create-tech-ppt" }
+        {
+          text: "Create Tech PPT in 15 mins",
+          link: "/scenarios/create-tech-ppt",
+        },
       ],
     },
     {
@@ -137,13 +161,22 @@ const sidebar = {
           items: [
             { text: "功能介绍概览", link: "/zh/cloud/feature-intro/" }, // 指向 zh/cloud/feature-intro/index.md
             { text: "问问 AI", link: "/zh/cloud/feature-intro/ask-ai" },
-            { text: "画布和节点", link: "/zh/cloud/feature-intro/canvas-nodes.md" },
-            { text: "创作工具栏", link: "/zh/cloud/feature-intro/creation-toolbar" },
+            {
+              text: "画布和节点",
+              link: "/zh/cloud/feature-intro/canvas-nodes.md",
+            },
+            {
+              text: "创作工具栏",
+              link: "/zh/cloud/feature-intro/creation-toolbar",
+            },
             { text: "全局搜索", link: "/zh/cloud/feature-intro/global-search" },
             { text: "知识库", link: "/zh/cloud/feature-intro/knowledge-base" },
             { text: "模板", link: "/zh/cloud/feature-intro/templates" },
-            { text: "右上角界面概览", link: "/zh/cloud/feature-intro/ui-overview" },
-          ]
+            {
+              text: "右上角界面概览",
+              link: "/zh/cloud/feature-intro/ui-overview",
+            },
+          ],
         },
         { text: "Chrome 插件", link: "/zh/cloud/chrome-extension" },
       ],
@@ -156,8 +189,14 @@ const sidebar = {
           text: "私有部署",
           items: [
             { text: "部署指南", link: "/zh/community-version/self-deploy/" },
-            { text: "Ollama 集成", link: "/zh/community-version/self-deploy/ollama" },
-            { text: "配置指南", link: "/zh/community-version/self-deploy/configuration" },
+            {
+              text: "Ollama 集成",
+              link: "/zh/community-version/self-deploy/ollama",
+            },
+            {
+              text: "配置指南",
+              link: "/zh/community-version/self-deploy/configuration",
+            },
           ],
         },
         { text: "常见问题", link: "/zh/community-version/faq" },
@@ -167,7 +206,10 @@ const sidebar = {
       text: "场景分享",
       items: [
         { text: "场景分享", link: "/zh/scenarios/" },
-        { text: "15分钟快速制作一份技术架构PPT", link: "/zh/scenarios/create-tech-ppt" }
+        {
+          text: "15分钟快速制作一份技术架构PPT",
+          link: "/zh/scenarios/create-tech-ppt",
+        },
       ],
     },
     {
@@ -212,6 +254,9 @@ export default defineConfig({
 
   // Remove .html extensions from URLs
   cleanUrls: true,
+
+  // Ignore dead links in README.md and other files
+  ignoreDeadLinks: true,
 
   // Configure head
   head: [
