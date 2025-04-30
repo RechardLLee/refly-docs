@@ -7,12 +7,12 @@ const enNav = [
     text: "Add to Chrome",
     link: "https://chromewebstore.google.com/detail/lecbjbapfkinmikhadakbclblnemmjpd",
   },
-  { text: "Community", link: "/community/contact-us" },
+  { text: "Community", link: "/en/community/contact-us" },
   {
     text: "v0.5.0",
-    items: [{ text: "Changelog", link: "/changelog/v0.5.0" }],
+    items: [{ text: "Changelog", link: "/en/changelog/v0.5.0" }],
   },
-  { text: "Roadmap", link: "/roadmap" },
+  { text: "Roadmap", link: "/en/roadmap" },
 ];
 
 const zhNav = [
@@ -34,52 +34,52 @@ const sidebar = {
   en: [
     {
       text: "Getting Started",
-      items: [{ text: "Welcome to Refly", link: "/" }],
+      items: [{ text: "Welcome to Refly", link: "/en/" }],
     },
     {
       text: "Guide",
       items: [
-        { text: "Crash Course", link: "/guide/crash-course" },
+        { text: "Crash Course", link: "/en/guide/crash-course" },
         {
           text: "Self-Deploy",
-          link: "/guide/self-deploy",
-          items: [{ text: "Ollama", link: "/guide/self-deploy/ollama" }],
+          link: "/en/guide/self-deploy",
+          items: [{ text: "Ollama", link: "/en/guide/self-deploy/ollama" }],
         },
-        { text: "Configuration", link: "/guide/configuration" },
-        { text: "Chrome Extension", link: "/guide/chrome-extension" },
-        { text: "Video Tutorials", link: "/guide/video-tutorials" },
+        { text: "Configuration", link: "/en/guide/configuration" },
+        { text: "Chrome Extension", link: "/en/guide/chrome-extension" },
+        { text: "Video Tutorials", link: "/en/guide/video-tutorials" },
       ],
     },
     {
       text: "Future Plans",
-      items: [{ text: "Product Roadmap", link: "/roadmap" }],
+      items: [{ text: "Product Roadmap", link: "/en/roadmap" }],
     },
     {
       text: "Community",
-      items: [{ text: "Contact Us", link: "/community/contact-us" }],
+      items: [{ text: "Contact Us", link: "/en/community/contact-us" }],
     },
     {
       text: "About",
       items: [
-        { text: "Privacy Policy", link: "/about/privacy-policy" },
-        { text: "Terms of Service", link: "/about/terms-of-service" },
+        { text: "Privacy Policy", link: "/en/about/privacy-policy" },
+        { text: "Terms of Service", link: "/en/about/terms-of-service" },
       ],
     },
     {
       text: "Changelog",
       items: [
-        { text: "v0.5.0", link: "/changelog/v0.5.0" },
-        { text: "v0.4.2", link: "/changelog/v0.4.2" },
-        { text: "v0.4.1", link: "/changelog/v0.4.1" },
-        { text: "v0.4.0", link: "/changelog/v0.4.0" },
-        { text: "v0.3.0", link: "/changelog/v0.3.0" },
-        { text: "v0.2.4", link: "/changelog/v0.2.4" },
-        { text: "v0.2.3", link: "/changelog/v0.2.3" },
-        { text: "v0.2.2", link: "/changelog/v0.2.2" },
-        { text: "v0.2.1", link: "/changelog/v0.2.1" },
-        { text: "v0.2.0", link: "/changelog/v0.2.0" },
-        { text: "v0.1.2", link: "/changelog/v0.1.2" },
-        { text: "v0.1.1", link: "/changelog/v0.1.1" },
+        { text: "v0.5.0", link: "/en/changelog/v0.5.0" },
+        { text: "v0.4.2", link: "/en/changelog/v0.4.2" },
+        { text: "v0.4.1", link: "/en/changelog/v0.4.1" },
+        { text: "v0.4.0", link: "/en/changelog/v0.4.0" },
+        { text: "v0.3.0", link: "/en/changelog/v0.3.0" },
+        { text: "v0.2.4", link: "/en/changelog/v0.2.4" },
+        { text: "v0.2.3", link: "/en/changelog/v0.2.3" },
+        { text: "v0.2.2", link: "/en/changelog/v0.2.2" },
+        { text: "v0.2.1", link: "/en/changelog/v0.2.1" },
+        { text: "v0.2.0", link: "/en/changelog/v0.2.0" },
+        { text: "v0.1.2", link: "/en/changelog/v0.1.2" },
+        { text: "v0.1.1", link: "/en/changelog/v0.1.1" },
       ],
     },
   ],
@@ -170,6 +170,7 @@ export default defineConfig({
     root: {
       label: "English",
       lang: "en",
+      link: "/en/",
       title: "Refly Docs",
       description: "Refly Documentation",
       themeConfig: {

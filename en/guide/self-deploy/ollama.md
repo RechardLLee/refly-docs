@@ -69,6 +69,17 @@ OPENAI_BASE_URL=http://host.docker.internal:11434/v1
 OPENAI_API_KEY=ollama
 ```
 
+At the same time, it is necessary to configure in the previous `apps\api\.env` file.
+
+```bash
+# Configure the base URL of the Ollama server
+# Since we access Ollama on the host from within the container, we need to use `host.docker.internal`
+OPENAI_BASE_URL=http://host.docker.internal:11434/v1
+
+# API key is required but will not be used, so we just need to set a dummy value.
+OPENAI_API_KEY=ollama
+```
+
 ::: tip
 In this case, we assume that you are running Refly and Ollama on the same host. If you are running Ollama on a remote machine, you need to replace `host.docker.internal` with the IP address of the remote machine.
 :::
