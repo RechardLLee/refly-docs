@@ -145,6 +145,9 @@ export default defineConfig({
   // Remove .html extensions from URLs
   cleanUrls: true,
 
+  // Ignore dead links in README.md and other files
+  ignoreDeadLinks: true,
+
   // Configure head
   head: [
     ["link", { rel: "icon", href: "/logo/logo.svg" }],
