@@ -1,11 +1,11 @@
 # Gitpod Deployment
 
 Visit https://github.com/refly-ai/refly and click on the `Open in Gitpod` icon.
-![Deploy to Gitpod](../public/images/deploy-to-gitpod.webp)
+![Deploy to Gitpod](/images/deploy-to-gitpod.webp)
 
 If it's your first time, you'll need to log in to Gitpod with your GitHub account, which will show the following interface.
 
-![Gitpod new workspace](../public/images/gitpod-new-workspace.webp)
+![Gitpod new workspace](/images/gitpod-new-workspace.webp)
 
 If you've forked the project and want to save your modifications, it's recommended to click the dropdown next to `refly` and change it to your project address.
 
@@ -19,11 +19,11 @@ tasks:
     init: cd deploy/docker && cp ../../apps/api/.env.example .env &&   docker compose up -d
 ```
 
-![Gitpod deploy init](../public/images/docker-compose-up.webp)
+![Gitpod deploy init](/images/docker-compose-up.webp)
 The deployment process takes a few minutes.
 
 Deployment successful!
-![Gitpod deploy success](../public/images/gitpod-deploy-success.webp)
+![Gitpod deploy success](/images/gitpod-deploy-success.webp)
 
 You'll notice that Gitpod actually provides a virtual machine that already supports Docker Compose deployment. Since Refly itself supports Docker Compose deployment, it seamlessly migrates to Gitpod.
 
@@ -89,7 +89,7 @@ docker exec -it refly_db psql -U refly -d refly -c "TRUNCATE TABLE refly.model_i
 ```
 
 After clicking `Ask AI`, you can see your initialized models.
-![AI model SQL init](../public/images/ai-model-sql-init.webp)
+![AI model SQL init](/images/ai-model-sql-init.webp)
 :::
 
 ::: info
